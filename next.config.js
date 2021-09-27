@@ -4,7 +4,7 @@ const rehypePrism = require("@mapbox/rehype-prism");
 module.exports = {
   target: "serverless",
   i18n: {
-    locales: ["en", "fr", "it"],
+    locales: ["en", "fr"],
     defaultLocale: "en",
   },
   pageExtensions: ["mdx", "tsx"],
