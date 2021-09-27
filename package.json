@@ -15,6 +15,7 @@
     "@svgr/webpack": "^5.4.0",
     "@types/gsap": "^3.0.0",
     "@types/js-yaml": "^3.12.5",
+    "axios": "^0.21.4",
     "date-fns": "^2.11.1",
     "formik": "^2.2.9",
     "gray-matter": "^4.0.2",
@@ -37,7 +38,8 @@
     "react-youtube": "^7.11.3",
     "sass": "^1.32.7",
     "schema-dts": "^0.6.0",
-    "spected": "^0.7.1"
+    "spected": "^0.7.1",
+    "dotenv": "^10.0.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.9",

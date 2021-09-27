@@ -9,6 +9,7 @@ import { isEmail, isRequired } from "../../lib/validation/rules";
 import { createValidator } from "../../lib/validation/validators";
 import { useFormik } from "formik";
 import Button from "../../lib/Button/Button";
+import axios from "axios";
 
 // export type MissionProps = {
 //   title: string;
@@ -60,6 +61,24 @@ const Contact: React.FC<ContactProps> = ({}) => {
     },
     onSubmit: async (values) => {
       console.log(values);
+      try {
+        const response = await axios.post(
+          "/.netlify/functions/send-contact-email",
+          {
+            contactName: formik.values.name,
+            contactEmail: formik.values.email,
+            contactMessage: formik.values.message,
+          },
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        formik.resetForm();
+      } catch (error) {
+        console.error(error);
+      }
     },
     validate,
   });
