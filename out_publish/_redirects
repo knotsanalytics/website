@@ -2,18 +2,10 @@
 /  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
 /  /en  200
 /404  /en/404.html  200
-/_next/data/mZ7t16hAa8Zbwm0TPGW8f/en.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
-/_next/data/mZ7t16hAa8Zbwm0TPGW8f/en/about.json  /.netlify/functions/next_about  200!  Cookie=__prerender_bypass,__next_preview_data
-/_next/data/mZ7t16hAa8Zbwm0TPGW8f/fr.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
-/_next/data/mZ7t16hAa8Zbwm0TPGW8f/fr/about.json  /.netlify/functions/next_about  200!  Cookie=__prerender_bypass,__next_preview_data
-/_next/data/mZ7t16hAa8Zbwm0TPGW8f/it.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
-/_next/data/mZ7t16hAa8Zbwm0TPGW8f/it/about.json  /.netlify/functions/next_about  200!  Cookie=__prerender_bypass,__next_preview_data
-/about  /.netlify/functions/next_about  200!  Cookie=__prerender_bypass,__next_preview_data
-/about  /en/about  200
+/_next/data/QviBZPTq7t-zGTeCGyC7j/en.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/QviBZPTq7t-zGTeCGyC7j/fr.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/QviBZPTq7t-zGTeCGyC7j/it.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
 /en  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
-/en/about  /.netlify/functions/next_about  200!  Cookie=__prerender_bypass,__next_preview_data
 /fr  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
-/fr/about  /.netlify/functions/next_about  200!  Cookie=__prerender_bypass,__next_preview_data
 /it  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
-/it/about  /.netlify/functions/next_about  200!  Cookie=__prerender_bypass,__next_preview_data
 /_next/image*  url=:url w=:width q=:quality  /.netlify/functions/next_image?url=:url&w=:width&q=:quality  200

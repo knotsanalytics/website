@@ -62,10 +62,16 @@ collections:
             name: image
             widget: image
             i18n: duplicate
-          - label: "Navigation Items"
-            name: "navigation"
+          - label: "Navigation Tags"
+            name: "navigation_tags"
+            i18n: true
             widget: "list"
-            allow_add: true
+            summary: "{{fields.tag.tag}}"
+            field:
+              i18n: true
+              label: Tag
+              name: tag
+              widget: "string"
       - name: "mission"
         label: "Mission"
         file: "src/pages/files/mission.yml"
@@ -84,10 +90,16 @@ collections:
             name: body
             widget: markdown
             i18n: true
-          - label: Image
-            name: image
-            widget: image
-            i18n: duplicate
+          - label: Navigation
+            name: nagigation
+            required: true
+            widget: list
+            hint: "Elements in the header"
+            allow_add: true
+            field:
+              label: item
+              name: item
+              widget: string
       - name: "value"
         label: "Value"
         file: "src/pages/files/value.yml"
