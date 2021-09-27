@@ -1,0 +1,30 @@
+en:
+  image: /images/hero-desktop.svg
+  title: Data to enrich your Business
+  subtitle: KNOTS is a data science company providing solutions to address the needs of your business and to help you to reach your goals.
+  navigation_tags:
+    - What
+    - Why
+    - Case studies
+    - About us
+    - Contact
+it:
+  title: Big Data Algorithms for Sea and Pesci
+  subtitle: KNOTS is a data science company providing solutions to address the needs of your business and to help you to reach your goals. We are experts in deep learning, data-driven predictive analytics and high-performance computing with in-depth understanding and knowledge of machine learning and AI solutions.
+  image: /images/hero-desktop.svg
+  navigation_tags:
+    - Cosa facciamo
+    - Perchè
+    - Casi studio
+    - Chi siamo
+    - Contatti
+fr:
+  title: Big Data Algorithms for Sea and Baguettes
+  subtitle: KNOTS is a data science company providing solutions to address the needs of your business and to help you to reach your goals. We are experts in deep learning, data-driven predictive analytics and high-performance computing with in-depth understanding and knowledge of machine learning and AI solutions.
+  image: /images/hero-desktop.svg
+  navigation_tags:
+    - What
+    - Why
+    - Case studies
+    - About us
+    - Contact
