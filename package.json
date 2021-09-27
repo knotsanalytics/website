@@ -2,6 +2,7 @@
   "name": "my-app",
   "version": "0.1.1",
   "private": true,
+  "proxy": "https://mystifying-banach-18b2c2.netlify.app/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

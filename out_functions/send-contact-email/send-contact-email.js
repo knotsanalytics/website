@@ -7,6 +7,9 @@ const {
   FROM_EMAIL_ADDRESS,
   CONTACT_TO_EMAIL_ADDRESS,
 } = process.env;
+
+console.log("heuu");
+console.log(process.env);
 const mailgun = require("mailgun-js")({
   apiKey: MAILGUN_API_KEY,
   domain: MAILGUN_DOMAIN,
@@ -23,7 +26,7 @@ exports.handler = async (event) => {
   }
 
   const data = JSON.parse(event.body);
-  if (!data.contactMessage || !data.contactName || !data.contactEmail) {
+  if (!data.contactName || !data.contactEmail || !data.contactMessage) {
     return { statusCode: 422, body: "Name, email, and message are required." };
   }
 
@@ -33,8 +36,8 @@ exports.handler = async (event) => {
     from: FROM_EMAIL_ADDRESS,
     to: CONTACT_TO_EMAIL_ADDRESS,
     "h:Reply-To": data.contactEmail,
-    subject: `New message from ${data.contactName}`,
-    text: `Name: ${data.contactName}\n\nEmail: ${data.contactEmail}\n\Message: ${data.message}`,
+    subject: `New job submission from ${data.contactName}`,
+    text: `${data.contactMessage}`,
   };
 
   return mailgun
