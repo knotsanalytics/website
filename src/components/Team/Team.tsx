@@ -59,8 +59,9 @@ const Team: React.FC<TeamProps> = ({}) => {
               <div className={styles.imgWrap}>
                 <img src={member.picture} alt={member.fullName} />
               </div>
-              <p className={styles.bio}>{member.bio}</p>
+              <h3 className={styles.name}>{member.fullName}</h3>
               <h3 className={styles.role}>{member.role}</h3>
+              <p className={styles.bio}>{member.bio}</p>
             </section>
           </div>
         ))}

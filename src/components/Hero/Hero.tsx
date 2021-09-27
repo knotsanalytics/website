@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import Button from "../../lib/Button/Button";
-import HalfCircle from "../../lib/HalfCircle/HalfCircle";
 import styles from "./Hero.module.scss";
 export type HeroProps = {
   title: string;

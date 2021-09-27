@@ -34,12 +34,17 @@
 
     overflow: hidden;
     margin: auto;
-    margin-bottom: 46px;
+    margin-bottom: 22px;
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  .name {
+    margin-bottom: 12px;
+    text-align: center;
   }
 
   .bio {
@@ -50,5 +55,6 @@
   .role {
     text-align: center;
     color: $light-grey;
+    margin-bottom: 46px;
   }
 }

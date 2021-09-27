@@ -16,7 +16,7 @@ const Navigation: React.FC<NavigationProps> = ({ navItems, handleElClick }) => {
   const locale = useRouter().locale;
   return (
     <div className={`${styles.Navigation}`}>
-      <Burger active={active} onClick={() => setActive(!active)} />
+      {/* <Burger active={active} onClick={() => setActive(!active)} /> */}
 
       {navItems.map((item, idx) => (
         <a
