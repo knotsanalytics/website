@@ -12,7 +12,9 @@ export type HeroProps = {
 };
 
 const Hero: React.FC<HeroProps> = ({ title, subtitle, image }) => {
-  console.log(image);
+  const handleGetInTouch = () => {
+    document.getElementById("contact").scrollIntoView();
+  };
 
   return (
     <div className={styles.heroContainer}>
@@ -20,9 +22,9 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, image }) => {
         <p className={styles.eyebrow}>hi, we are knots, we specialize in</p>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.subtitle}>{subtitle}</p>
-        <a href="mailto:webmaster@example.com" className={styles.buttonWrap}>
-          <Button label={"Get in touch"} />
-        </a>
+        <div className={styles.buttonWrap}>
+          <Button label={"Get in touch"} onClicked={handleGetInTouch} />
+        </div>
       </div>
     </div>
   );

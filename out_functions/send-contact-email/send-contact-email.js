@@ -8,8 +8,6 @@ const {
   CONTACT_TO_EMAIL_ADDRESS,
 } = process.env;
 
-console.log("heuu");
-console.log(process.env);
 const mailgun = require("mailgun-js")({
   apiKey: MAILGUN_API_KEY,
   domain: MAILGUN_DOMAIN,
@@ -33,7 +31,7 @@ exports.handler = async (event) => {
   var FormData = require("form-data");
   let formData = new FormData();
   formData = {
-    from: FROM_EMAIL_ADDRESS,
+    from: data.contactEmail,
     to: CONTACT_TO_EMAIL_ADDRESS,
     "h:Reply-To": data.contactEmail,
     subject: `New job submission from ${data.contactName}`,

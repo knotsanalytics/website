@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Contact.module.scss";
 import ReactMarkdown from "react-markdown";
 import { gsap } from "gsap";
@@ -31,6 +31,8 @@ const mockData = {
   formEmailLabel: "Your Email",
   formMessageLabel: "Your Message",
   formCtaLabel: "Submit",
+  formConfirmationMessage:
+    "Your message was sent successfully!\nWe'll be in touch.",
   email: "something@gmail.com",
   address: "5 Rue Pavillon,\n13001 Marseille, France",
   phone: "+39 3207483892",
@@ -51,7 +53,7 @@ const getVisibleError = (formik: any, fieldName: string) =>
   formik.touched[fieldName] ? formik.errors[fieldName] : "";
 
 const Contact: React.FC<ContactProps> = ({}) => {
-  useEffect(() => {}, []);
+  const [messageSent, setMessageSent] = useState<boolean>(false);
 
   const formik = useFormik({
     initialValues: {
@@ -75,7 +77,9 @@ const Contact: React.FC<ContactProps> = ({}) => {
             },
           }
         );
+
         formik.resetForm();
+        setMessageSent(true);
       } catch (error) {
         console.error(error);
       }
@@ -84,7 +88,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
   });
 
   return (
-    <div className={styles.contactContainer}>
+    <div className={styles.contactContainer} id={"contact"}>
       <div className={cn(`grid`, styles.grid)}>
         <div
           className={`col-12 col-start-md-2 col-end-md-7 col-start-lg-2 col-end-lg-6 ${styles.eyebrowRow}`}
@@ -101,6 +105,14 @@ const Contact: React.FC<ContactProps> = ({}) => {
           className={`col-12 col-start-md-2 col-end-md-6 col-start-lg-2 col-end-lg-6`}
         >
           <div className={styles.card}>
+            <div
+              className={cn(styles.confirmDialog, {
+                [styles.active]: messageSent,
+              })}
+            >
+              <p>{mockData.formConfirmationMessage}</p>
+            </div>
+
             <form
               id="contact-form"
               className={styles.form}
