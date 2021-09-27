@@ -10,119 +10,118 @@ i18n:
   structure: single_file
   locales: [en, fr]
   default_locale: en
-# collections:
-#   - name: "pages"
-#     label: "Pages"
-#     i18n:
-#       structure: single_file
-#     files:
-#       - label: "HomePage"
-#         name: "homepage"
-#         file: "src/pages/files/homepage.yml"
-#         i18n: true
-#         fields:
-#           - { label: Hero Title, name: hero_title, widget: string, i18n: true }
-#           - label: "Mission"
-#             name: "mission"
-#             widget: "relation"
-#             collection: "sections"
-#             file: mission
-#             searchFields: ["title"]
-#             display_fields: ["title"]
-#             valueField: "title"
-#           - label: "Value"
-#             name: "value"
-#             widget: "relation"
-#             collection: "sections"
-#             file: value
-#             searchFields: ["title"]
-#             display_fields: ["title"]
-#             valueField: "title"
+collections:
+  - name: "pages"
+    label: "Pages"
+    i18n:
+      structure: single_file
+    files:
+      - label: "HomePage"
+        name: "homepage"
+        file: "src/pages/files/homepage.yml"
+        i18n: true
+        fields:
+          - { label: Hero Title, name: hero_title, widget: string, i18n: true }
+          - label: "Mission"
+            name: "mission"
+            widget: "relation"
+            collection: "sections"
+            file: mission
+            searchFields: ["title"]
+            display_fields: ["title"]
+            valueField: "title"
+          - label: "Value"
+            name: "value"
+            widget: "relation"
+            collection: "sections"
+            file: value
+            searchFields: ["title"]
+            display_fields: ["title"]
+            valueField: "title"
 
-#   - name: "sections"
-#     label: "Sections"
-#     i18n:
-#       structure: single_file
-#     files:
-#       - name: "hero"
-#         label: "Hero"
-#         file: "src/pages/files/hero.yml"
-#         description: "Hero"
-#         i18n: true
-#         fields:
-#           - label: Title
-#             name: title
-#             widget: string
-#             i18n: true
-#           - label: Subtitle
-#             name: subtitle
-#             widget: string
-#             i18n: true
-#           - label: Image
-#             name: image
-#             widget: image
-#             i18n: duplicate
-#           - label: "Navigation Tags"
-#             name: "navigation_tags"
-#             i18n: true
-#             widget: "list"
-#             summary: "{{fields.tag.tag}}"
-#             field:
-#               i18n: true
-#               label: Tag
-#               name: tag
-#               widget: "string"
-#       - name: "mission"
-#         label: "Mission"
-#         file: "src/pages/files/mission.yml"
-#         description: "Our Mission"
-#         i18n: true
-#         fields:
-#           - label: Title
-#             name: title
-#             widget: string
-#             i18n: true
-#           - label: Subtitle
-#             name: subtitle
-#             widget: string
-#             i18n: true
-#           - label: body
-#             name: body
-#             widget: markdown
-#             i18n: true
-#           - label: Navigation
-#             name: nagigation
-#             required: true
-#             widget: list
-#             hint: "Elements in the header"
-#             allow_add: true
-#             field:
-#               label: item
-#               name: item
-#               widget: string
-#       - name: "value"
-#         label: "Value"
-#         file: "src/pages/files/value.yml"
-#         description: "Our Value"
-#         i18n: true
-#         fields:
-#           - label: Title
-#             name: title
-#             widget: string
-#             i18n: true
-#           - label: Subtitle
-#             name: subtitle
-#             widget: string
-#             i18n: true
-#           - label: body
-#             name: body
-#             widget: markdown
-#             i18n: true
-#           - label: Image
-#             name: image
-#             widget: image
-#             i18n: duplicate
-
+  - name: "sections"
+    label: "Sections"
+    i18n:
+      structure: single_file
+    files:
+      - name: "hero"
+        label: "Hero"
+        file: "src/pages/files/hero.yml"
+        description: "Hero"
+        i18n: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            i18n: true
+          - label: Subtitle
+            name: subtitle
+            widget: string
+            i18n: true
+          - label: Image
+            name: image
+            widget: image
+            i18n: duplicate
+          - label: "Navigation Tags"
+            name: "navigation_tags"
+            i18n: true
+            widget: "list"
+            summary: "{{fields.tag.tag}}"
+            field:
+              i18n: true
+              label: Tag
+              name: tag
+              widget: "string"
+      - name: "mission"
+        label: "Mission"
+        file: "src/pages/files/mission.yml"
+        description: "Our Mission"
+        i18n: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            i18n: true
+          - label: Subtitle
+            name: subtitle
+            widget: string
+            i18n: true
+          - label: body
+            name: body
+            widget: markdown
+            i18n: true
+          - label: Navigation
+            name: nagigation
+            required: true
+            widget: list
+            hint: "Elements in the header"
+            allow_add: true
+            field:
+              label: item
+              name: item
+              widget: string
+      - name: "value"
+        label: "Value"
+        file: "src/pages/files/value.yml"
+        description: "Our Value"
+        i18n: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            i18n: true
+          - label: Subtitle
+            name: subtitle
+            widget: string
+            i18n: true
+          - label: body
+            name: body
+            widget: markdown
+            i18n: true
+          - label: Image
+            name: image
+            widget: image
+            i18n: duplicate
 # - name: "posts"
 #   label: "Projects"
 #   folder: "src/pages/posts"
