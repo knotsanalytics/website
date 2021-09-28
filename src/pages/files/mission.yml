@@ -10,18 +10,19 @@ en:
 
 
     Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-it:
-  body: >-
-    IT - Leverage **agile frameworks** to provide a robust synopsis for high
-    level overviews. Iterative approaches to *corporate strategy* foster
-    [collaborative](https://images.unsplash.com/photo-1613353948535-0f50344f69f7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80)
-    thinking to further the overall value proposition. 
-
-
-    Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-  subtitle: Whatever it might be
-  title: This is our mission
-  image: /images/photo-1550745165-9bc0b252726f.jpeg
+  missionSections:
+    - eyebrow: WHAT WE DO
+      title: WE TACKLE\nCOMPLEX PROBLEMS
+      body: With our in-depth understanding and knowledge of big data we can develop
+        the best solutions for you.
+    - eyebrow: HOW WE DO IT
+      title: WE ARE EXPERTS IN DATA ANALYSIS
+      body: and high-performance computing and we focus on deep learning and
+        data-driven predictive analytics.
+    - eyebrow: WHY WE DO IT
+      body: With our in-depth understanding and knowledge of big data we can develop
+        the best solutions for you.
+      title: WE CAN HELP\nYOUR BUSINESS
 fr:
   title: This is our mission
   subtitle: Whatever it might be
@@ -34,3 +35,16 @@ fr:
 
     Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
   image: /images/photo-1550745165-9bc0b252726f.jpeg
+  missionSections:
+    - eyebrow: WHAT WE DO
+      title: WE TACKLE\nCOMPLEX PROBLEMS
+      body: With our in-depth understanding and knowledge of big data we can develop
+        the best solutions for you.
+    - eyebrow: HOW WE DO IT
+      title: WE ARE EXPERTS IN DATA ANALYSIS
+      body: and high-performance computing and we focus on deep learning and
+        data-driven predictive analytics.
+    - eyebrow: WHY WE DO IT
+      title: WE CAN HELP\nYOUR BUSINESS
+      body: With our in-depth understanding and knowledge of big data we can develop
+        the best solutions for you.
