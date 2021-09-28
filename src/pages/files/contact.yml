@@ -1,0 +1,26 @@
+en:
+  eyebrow: SAY HI
+  title: GET IN TOUCH
+  email: knots.analytics@gmail.com
+  address: 5 Rue Pavillon,\n13001 Marseille, France
+  phone: +39 3207483892
+  linkedin: https://www.linkedin.com/feed/
+  contactForm:
+    nameLabel: Your Name
+    emailLabel: Your Email
+    messageLabel: Your Message
+    ctaLabel: Submit
+    confirmationMessage: Your message was sent successfully!\nWe'll be in touch.
+fr:
+  eyebrow: SAY HI
+  title: GET IN TOUCH
+  email: knots.analytics@gmail.com
+  address: 5 Rue Pavillon,\n13001 Marseille, France
+  phone: +39 3207483892
+  linkedin: https://www.linkedin.com/feed/
+  contactForm:
+    confirmationMessage: Your message was sent successfully!\nWe'll be in touch.
+    ctaLabel: Submit
+    messageLabel: Your Message
+    emailLabel: Your Email
+    nameLabel: Your Name
