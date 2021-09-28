@@ -68,7 +68,7 @@ const Contact: React.FC<ContactProps> = ({
           },
           {
             headers: {
-              "Content-Type": "multipart/form-data",
+              "Content-Type": "application/json",
             },
           }
         );
