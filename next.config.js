@@ -2,7 +2,7 @@ const withMdxEnhanced = require("next-mdx-enhanced");
 const rehypePrism = require("@mapbox/rehype-prism");
 
 module.exports = {
-  target: "experimental-serverless-trace",
+  target: "serverless",
   i18n: {
     locales: ["en", "fr"],
     defaultLocale: "en",
