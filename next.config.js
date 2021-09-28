@@ -8,7 +8,7 @@ module.exports = {
     defaultLocale: "en",
   },
   pageExtensions: ["mdx", "tsx"],
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+  webpack: (config, { buildId, dev, defaultLoaders, webpack }) => {
     config.module.rules.push(
       ...[
         {
