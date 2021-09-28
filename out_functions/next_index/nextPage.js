@@ -50874,15 +50874,19 @@ const Contact = ({
     },
     onSubmit: async values => {
       try {
-        const response = await axios_default.a.post("/.netlify/functions/next_email", {
-          contactName: formik.values.name,
-          contactEmail: formik.values.email,
-          contactMessage: formik.values.message
-        }, {
-          headers: {
-            "Content-Type": "multipart/form-data"
+        const response = await axios_default.a.post(
+          "/.netlify/functions/next_email",
+          {
+            contactName: formik.values.name,
+            contactEmail: formik.values.email,
+            contactMessage: formik.values.message,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
           }
-        });
+        );
         formik.resetForm();
         setMessageSent(true);
       } catch (error) {
