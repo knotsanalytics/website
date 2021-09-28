@@ -82,32 +82,36 @@ collections:
         description: "Our Mission"
         i18n: true
         fields:
-          - label: Title
-            name: title
-            widget: string
-            i18n: true
-          - label: Subtitle
-            name: subtitle
-            widget: string
-            i18n: true
-          - label: body
-            name: body
-            widget: markdown
-            i18n: true
-          - label: Navigation
-            name: nagigation
-            required: true
-            widget: list
-            hint: "Elements in the header"
-            allow_add: true
-            field:
-              label: item
-              name: item
-              widget: string
-      - name: "value"
-        label: "Value"
-        file: "src/pages/files/value.yml"
-        description: "Our Value"
+          - {
+              label: Mission Sections,
+              name: missionSections,
+              widget: "list",
+              i18n: true,
+              allow_add: true,
+              collapsed: true,
+              max: 3,
+              min: 3,
+              fields:
+                [
+                  {
+                    label: "Eyebrow",
+                    name: "eyebrow",
+                    widget: "string",
+                    i18n: true,
+                  },
+                  {
+                    label: "Title",
+                    name: "title",
+                    widget: "string",
+                    i18n: true,
+                  },
+                  { label: "Body", name: "body", widget: "string", i18n: true },
+                ],
+            }
+      - name: "team"
+        label: "Team"
+        file: "src/pages/files/team.yml"
+        description: "The Team"
         i18n: true
         fields:
           - label: Title
@@ -118,15 +122,96 @@ collections:
             name: subtitle
             widget: string
             i18n: true
-          - label: body
-            name: body
-            widget: markdown
+          - {
+              label: Members,
+              name: members,
+              widget: "list",
+              i18n: true,
+              allow_add: true,
+              collapsed: true,
+              max: 4,
+              min: 2,
+              fields:
+                [
+                  {
+                    label: "Full Name",
+                    name: "fullName",
+                    widget: "string",
+                    i18n: true,
+                  },
+                  { label: "Role", name: "role", widget: "string", i18n: true },
+                  { label: "Bio", name: "bio", widget: "string", i18n: true },
+                  {
+                    label: "Picture",
+                    name: "picture",
+                    widget: "image",
+                    i18n: duplicate,
+                  },
+                ],
+            }
+      - name: "contact"
+        label: "Contact"
+        file: "src/pages/files/contact.yml"
+        description: "Contact"
+        i18n: true
+        fields:
+          - label: Eyebrow
+            name: eyebrow
+            widget: string
             i18n: true
-          - label: Image
-            name: image
-            widget: image
-            i18n: duplicate
-# - name: "posts"
+          - label: Title
+            name: title
+            widget: string
+            i18n: true
+          - label: Email
+            name: email
+            widget: string
+            i18n: true
+          - label: Address
+            name: address
+            widget: string
+            i18n: true
+          - label: Phone
+            name: phone
+            widget: string
+            i18n: true
+          - label: Linkedin
+            name: linkedin
+            widget: string
+            i18n: true
+          - label: "Contact Form"
+            name: "contactForm"
+            collapsed: true
+            widget: "object"
+            i18n: true
+            fields:
+              - {
+                  label: Name Label,
+                  name: nameLabel,
+                  widget: string,
+                  i18n: true,
+                }
+              - {
+                  label: Email Label,
+                  name: emailLabel,
+                  widget: string,
+                  i18n: true,
+                }
+              - {
+                  label: Message Label,
+                  name: messageLabel,
+                  widget: string,
+                  i18n: true,
+                }
+              - { label: Cta Label, name: ctaLabel, widget: string, i18n: true }
+              - {
+                  label: Confirmation Message,
+                  name: confirmationMessage,
+                  widget: string,
+                  i18n: true,
+                }
+
+            # - name: "posts"
 #   label: "Projects"
 #   folder: "src/pages/posts"
 #   extension: "mdx"
