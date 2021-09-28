@@ -50,6 +50,10 @@ collections:
         description: "Hero"
         i18n: true
         fields:
+          - label: Eyebrow
+            name: eyebrow
+            widget: string
+            i18n: true
           - label: Title
             name: title
             widget: string
@@ -58,10 +62,10 @@ collections:
             name: subtitle
             widget: string
             i18n: true
-          - label: Image
-            name: image
-            widget: image
-            i18n: duplicate
+          - label: CTA Label
+            name: ctaLabel
+            widget: string
+            i18n: true
           - label: "Navigation Tags"
             name: "navigation_tags"
             i18n: true
