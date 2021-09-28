@@ -1,5 +1,6 @@
 # Next-on-Netlify Redirects
 /  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/  /.netlify/functions/send_stuff  200!  Cookie=__prerender_bypass,__next_preview_data
 /  /en  200
 /404  /en/404.html  200
 /_next/data/NF5c0USz1IpTfgzkzPf59/en.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
