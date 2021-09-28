@@ -1,0 +1,9 @@
+# Next-on-Netlify Redirects
+/  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/  /en  200
+/404  /en/404.html  200
+/_next/data/oVVVHaK25Fi2Ow4SuAS9d/en.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/oVVVHaK25Fi2Ow4SuAS9d/fr.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/en  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/fr  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/image*  url=:url w=:width q=:quality  /.netlify/functions/next_image?url=:url&w=:width&q=:quality  200
