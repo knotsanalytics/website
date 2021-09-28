@@ -1,6 +1,5 @@
 en:
-  image: /images/hero-desktop.svg
-  title: DATA TO ENRICH\nYOUR BUSINESS
+  title: DATA TO ENRICH YOUR BUSINESS
   subtitle: KNOTS is a data science company providing solutions to address the
     needs of your business and to help you to reach your goals.
   navigation_tags:
@@ -10,10 +9,9 @@ en:
   eyebrow: HI, WE ARE KNOTS, WE SPECIALIZE IN
   ctaLabel: Get in touch
 fr:
-  title: DATA TO ENRICH\nYOUR BUSINESS
+  title: DATA TO ENRICH YOUR BUSINESS
   subtitle: KNOTS is a data science company providing solutions to address the
     needs of your business and to help you to reach your goals.
-  image: /images/hero-desktop.svg
   navigation_tags:
     - What We Do
     - The Team

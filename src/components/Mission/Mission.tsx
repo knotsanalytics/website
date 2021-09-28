@@ -7,31 +7,14 @@ import { TextPlugin } from "gsap/dist/TextPlugin";
 import cn from "classnames";
 
 export type MissionProps = {
-  title: string;
-  subtitle: string;
-  body: any;
-  image: string;
+  missionSections: Array<{
+    title: string;
+    eyebrow: string;
+    body: any;
+  }>;
 };
 
-const mockData = [
-  {
-    name: "WHAT WE DO",
-    headline: "We Tackle \ncomplex problems",
-    body: "With our in-depth understanding and knowledge of big data we can develop the best solutions for you.",
-  },
-  {
-    name: "HOW WE DO IT",
-    headline: "We are experts in data analysis",
-    body: "and high-performance computing and we focus on deep learning and data-driven predictive analytics.",
-  },
-  {
-    name: "WHY WE DO IT",
-    headline: "We can help your business",
-    body: "With our in-depth understanding and knowledge of big data we can develop the best solutions for you.",
-  },
-];
-
-const Mission: React.FC<MissionProps> = ({ title, subtitle, body, image }) => {
+const Mission: React.FC<MissionProps> = ({ missionSections }) => {
   const missionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -71,7 +54,7 @@ const Mission: React.FC<MissionProps> = ({ title, subtitle, body, image }) => {
   return (
     <div className={styles.missionContainer} ref={missionRef}>
       <div className={styles.latLayout}></div>
-      {mockData.map((data, idx) => (
+      {missionSections.map((data, idx) => (
         <div
           className={cn(styles.sectionWrap, "section", {
             [styles.first]: idx === 0,
@@ -85,18 +68,18 @@ const Mission: React.FC<MissionProps> = ({ title, subtitle, body, image }) => {
             <div
               className={`col-12 col-start-md-2 col-end-md-7 col-start-lg-2 col-end-lg-6 ${styles.eyebrowRow}`}
             >
-              <h3 className={styles.eyebrow}>{mockData[idx].name}</h3>
+              <h3 className={styles.eyebrow}>{data.eyebrow}</h3>
               <div className={styles.separator}></div>
             </div>
             <div
               className={`col-12 col-start-md-2 col-end-md-7 col-start-lg-2 col-end-lg-6`}
             >
-              <h2 className={styles.headline}>{mockData[idx].headline}</h2>
+              <h2 className={styles.headline}>{data.title}</h2>
             </div>
             <div
               className={`col-12 col-start-md-3 col-end-md-7 col-start-lg-3 col-end-lg-5`}
             >
-              <p className={`large ${styles.body}`}>{mockData[idx].body}</p>
+              <p className={`large ${styles.body}`}>{data.body}</p>
             </div>
           </div>
         </div>

@@ -6,11 +6,12 @@ import styles from "./Hero.module.scss";
 export type HeroProps = {
   title: string;
   subtitle: string;
-  image: string;
+  eyebrow: string;
+  ctaLabel: string;
   navigation_tags: string[];
 };
 
-const Hero: React.FC<HeroProps> = ({ title, subtitle, image }) => {
+const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
   const handleGetInTouch = () => {
     document.getElementById("contact").scrollIntoView();
   };
@@ -18,11 +19,11 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, image }) => {
   return (
     <div className={styles.heroContainer}>
       <div className={styles.heroContent}>
-        <p className={styles.eyebrow}>hi, we are knots, we specialize in</p>
+        <p className={styles.eyebrow}>{eyebrow}</p>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.subtitle}>{subtitle}</p>
         <div className={styles.buttonWrap}>
-          <Button label={"Get in touch"} onClicked={handleGetInTouch} />
+          <Button label={ctaLabel} onClicked={handleGetInTouch} />
         </div>
       </div>
     </div>

@@ -11,32 +11,20 @@ import { useFormik } from "formik";
 import Button from "../../lib/Button/Button";
 import axios from "axios";
 
-// export type MissionProps = {
-//   title: string;
-//   subtitle: string;
-//   members: Array<{
-//     fullName: string;
-//     role: string;
-//     picture: string;
-//     bio: string;
-//   }>;
-// };
-
-export type ContactProps = {};
-
-const mockData = {
-  eyebrow: "Say Hi",
-  title: "Get In touch",
-  formNameLabel: "Your Name",
-  formEmailLabel: "Your Email",
-  formMessageLabel: "Your Message",
-  formCtaLabel: "Submit",
-  formConfirmationMessage:
-    "Your message was sent successfully!\nWe'll be in touch.",
-  email: "something@gmail.com",
-  address: "5 Rue Pavillon,\n13001 Marseille, France",
-  phone: "+39 3207483892",
-  linkedin: "#",
+export type ContactProps = {
+  eyebrow: string;
+  title: string;
+  email: string;
+  address: string;
+  linkedin: string;
+  phone: string;
+  contactForm: {
+    nameLabel: string;
+    emailLabel: string;
+    messageLabel: string;
+    ctaLabel: string;
+    confirmationMessage: string;
+  };
 };
 
 const rules = {
@@ -52,7 +40,15 @@ const validate = createValidator(rules);
 const getVisibleError = (formik: any, fieldName: string) =>
   formik.touched[fieldName] ? formik.errors[fieldName] : "";
 
-const Contact: React.FC<ContactProps> = ({}) => {
+const Contact: React.FC<ContactProps> = ({
+  eyebrow,
+  title,
+  email,
+  address,
+  linkedin,
+  phone,
+  contactForm,
+}) => {
   const [messageSent, setMessageSent] = useState<boolean>(false);
 
   const formik = useFormik({
@@ -93,13 +89,13 @@ const Contact: React.FC<ContactProps> = ({}) => {
         <div
           className={`col-12 col-start-md-2 col-end-md-7 col-start-lg-2 col-end-lg-6 ${styles.eyebrowRow}`}
         >
-          <h3 className={styles.eyebrow}>{mockData.eyebrow}</h3>
+          <h3 className={styles.eyebrow}>{eyebrow}</h3>
           <div className={styles.separator}></div>
         </div>
         <div
           className={`col-12 col-start-md-2 col-end-md-7 col-start-lg-2 col-end-lg-6`}
         >
-          <h2 className={styles.headline}>{mockData.title}</h2>
+          <h2 className={styles.headline}>{title}</h2>
         </div>
         <div
           className={`col-12 col-start-md-2 col-end-md-6 col-start-lg-2 col-end-lg-6`}
@@ -110,7 +106,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
                 [styles.active]: messageSent,
               })}
             >
-              <p>{mockData.formConfirmationMessage}</p>
+              <p>{contactForm.confirmationMessage}</p>
             </div>
 
             <form
@@ -122,7 +118,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
               method="POST"
             >
               <label htmlFor="name" className={``}>
-                {mockData.formNameLabel}
+                {contactForm.nameLabel}
                 <span className={styles.error}>
                   {getVisibleError(formik, "name")}
                 </span>
@@ -138,7 +134,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
               />
 
               <label htmlFor="email" className={`fade-in-up`}>
-                {mockData.formEmailLabel}
+                {contactForm.emailLabel}
                 <span className={styles.error}>
                   {getVisibleError(formik, "email")}
                 </span>
@@ -154,7 +150,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
               />
 
               <label htmlFor="message" className={``}>
-                {mockData.formMessageLabel}
+                {contactForm.messageLabel}
                 <span className={styles.error}>
                   {getVisibleError(formik, "message")}
                 </span>
@@ -169,7 +165,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
               />
 
               <Button
-                label={mockData.formCtaLabel}
+                label={contactForm.ctaLabel}
                 type="submit"
                 className={styles.cta}
               />
@@ -180,19 +176,15 @@ const Contact: React.FC<ContactProps> = ({}) => {
           className={`${styles.itemsCol} col-12 col-start-md-8 col-end-md-12 col-start-lg-9 col-end-lg-12`}
         >
           <label>Phone Number</label>
-          <p className={styles.phone}>{mockData.phone}</p>
+          <p className={styles.phone}>{phone}</p>
           <label>Email</label>
-          <p className={styles.mail}>{mockData.email}</p>
+          <p className={styles.mail}>{email}</p>
           <label>Linkedin</label>
-          <a
-            target="_blank"
-            href={mockData.linkedin}
-            className={styles.linkedin}
-          >
+          <a target="_blank" href={linkedin} className={styles.linkedin}>
             linkedin/knots.com
           </a>
           <label>Address</label>
-          <p className={styles.address}>{mockData.address}</p>
+          <p className={styles.address}>{address}</p>
         </div>
       </div>
     </div>

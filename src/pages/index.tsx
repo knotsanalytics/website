@@ -8,16 +8,17 @@ import styles from "./homepage.module.scss";
 import Value, { ValueProps } from "../components/Value/Value";
 import Link from "next/link";
 import Hero, { HeroProps } from "../components/Hero/Hero";
-import Team from "../components/Team/Team";
-import Contact from "../components/Contact/Contact";
+import Team, { TeamProps } from "../components/Team/Team";
+import Contact, { ContactProps } from "../components/Contact/Contact";
 
 type Props = {
   hero: HeroProps;
   mission: MissionProps;
-  value: ValueProps;
+  team: TeamProps;
+  contact: ContactProps;
 };
 
-export default function Index({ hero, mission, value }: Props) {
+export default function Index({ hero, mission, team, contact }: Props) {
   useEffect(() => {
     window.history.scrollRestoration = "manual";
   }, []);
@@ -26,21 +27,23 @@ export default function Index({ hero, mission, value }: Props) {
       <BasicMeta url={"/"} />
       <Hero {...hero} />
       <Mission {...mission} />
-      <Team />
-      <Contact />
+      <Team {...team} />
+      <Contact {...contact} />
     </Layout>
   );
 }
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const hero = gePageData("hero")[locale];
   const mission = gePageData("mission")[locale];
-  const value = gePageData("value")[locale];
+  const team = gePageData("team")[locale];
+  const contact = gePageData("contact")[locale];
 
   return {
     props: {
       hero,
       mission,
-      value,
+      team,
+      contact,
     },
   };
 };

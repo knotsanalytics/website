@@ -181,7 +181,7 @@ collections:
           - label: Email
             name: email
             widget: string
-            i18n: true
+            i18n: duplicate
           - label: Address
             name: address
             widget: string
@@ -189,7 +189,7 @@ collections:
           - label: Phone
             name: phone
             widget: string
-            i18n: true
+            i18n: duplicate
           - label: Linkedin
             name: linkedin
             widget: string
@@ -225,98 +225,3 @@ collections:
                   widget: string,
                   i18n: true,
                 }
-
-            # - name: "posts"
-#   label: "Projects"
-#   folder: "src/pages/posts"
-#   extension: "mdx"
-#   format: "frontmatter"
-#   create: true
-#   slug: "{{slug}}"
-#   identifier_field: slug
-#   summary: "{{title}}"
-#   fields:
-#     - label: "Slug"
-#       name: "slug"
-#       widget: "string"
-#     - label: "Title"
-#       name: "title"
-#       widget: "string"
-#     - label: "Publish Date"
-#       name: "date"
-#       widget: "datetime"
-#       format: "YYYY-MM-DD"
-#       dateFormat: "YYYY-MM-DD"
-#       timeFormat: false
-#     - label: Author
-#       name: "author"
-#       widget: relation
-#       collection: "meta"
-#       file: "authors"
-#       searchFields:
-#         - "authors.*.name"
-#       displayFields:
-#         - "authors.*.name"
-#       valueField: "authors.*.slug"
-#     - label: Tags
-#       label_singular: "Tag"
-#       name: "tags"
-#       widget: list
-#       summary: "{{fields.tag}}"
-#       field:
-#         label: Tag
-#         name: tag
-#         widget: relation
-#         collection: "meta"
-#         file: "tags"
-#         searchFields:
-#           - "tags.*.name"
-#         displayFields:
-#           - "tags.*.name"
-#         valueField: "tags.*.slug"
-#     - label: "Body"
-#       name: "body"
-#       widget: "markdown"
-
-# - name: "config"
-#   label: "Config"
-#   delete: false
-#   editor:
-#     preview: false
-#   files:
-#     - name: "general"
-#       label: "Site Config"
-#       file: "config.json"
-#       description: "General site settings"
-#       fields:
-#         - label: "URL"
-#           name: "base_url"
-#           widget: "string"
-#           hint: "Do not enter the trailing slash of the URL"
-#         - label: "Site title"
-#           name: "site_title"
-#           widget: "string"
-#         - label: "Site description"
-#           name: "site_description"
-#           widget: "string"
-#         - label: "Site keywords"
-#           name: "site_keywords"
-#           widget: "list"
-#           summary: "{{fields.keyword.keyword}}"
-#           field:
-#             label: Keyword
-#             name: keyword
-#             widget: "string"
-#         - label: "GitHub account"
-#           name: "github_account"
-#           widget: "string"
-# - label: "About Page"
-#   name: "about"
-#   file: "src/pages/files/about.yml"
-#   i18n: true
-#   fields:
-#     - { label: Title, name: title, widget: string, i18n: true }
-#     - { label: Intro, name: intro, widget: markdown, i18n: true }
-#     - label: Image
-#       name: image
-#       widget: image
