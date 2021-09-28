@@ -2,6 +2,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "@types/dotenv": "^8.2.0",
-    "critters": "^0.0.10"
+    "critters": "^0.0.10",
+    "mailgun-js": "^0.22.0"
   }
 }
