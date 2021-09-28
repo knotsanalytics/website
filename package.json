@@ -5,12 +5,13 @@
   "proxy": "https://mystifying-banach-18b2c2.netlify.app/",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "run-p build:**",
+    "build:app": "next build",
+    "build:lambda": "netlify-lambda build out_functions",
     "start": "next start",
     "export": "next build && next export -o ./dist",
     "test": "jest",
-    "postbuild": "next-on-netlify",
-    "postinstall": "netlify-lambda install"
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.5.0",
