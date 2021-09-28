@@ -60,7 +60,7 @@ const Contact: React.FC<ContactProps> = ({
     onSubmit: async (values) => {
       try {
         const response = await axios.post(
-          "/.netlify/functions/send-contact-email",
+          "/.netlify/functions/send-email",
           {
             contactName: formik.values.name,
             contactEmail: formik.values.email,
