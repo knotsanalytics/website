@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "run-p build:**",
     "build:app": "next build",
-    "build:lambda": "netlify-lambda build out_functions",
+    "build:lambda": "netlify-lambda build lambda",
     "start": "next start",
     "export": "next build && next export -o ./dist",
     "test": "jest",
@@ -20,6 +20,7 @@
     "@types/js-yaml": "^3.12.5",
     "axios": "^0.21.4",
     "date-fns": "^2.11.1",
+    "dotenv": "^10.0.0",
     "formik": "^2.2.9",
     "gray-matter": "^4.0.2",
     "gsap": "file:gsap-bonus.tgz",
@@ -42,7 +43,7 @@
     "sass": "^1.32.7",
     "schema-dts": "^0.6.0",
     "spected": "^0.7.1",
-    "dotenv": "^10.0.0"
+    "yarn-run-all": "^3.1.1"
   },
   "devDependencies": {
     "@types/jest": "^26.0.9",

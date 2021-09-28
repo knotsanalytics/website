@@ -2,10 +2,8 @@
 /  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
 /  /en  200
 /404  /en/404.html  200
-/_next/data/QviBZPTq7t-zGTeCGyC7j/en.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
-/_next/data/QviBZPTq7t-zGTeCGyC7j/fr.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
-/_next/data/QviBZPTq7t-zGTeCGyC7j/it.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/NF5c0USz1IpTfgzkzPf59/en.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/NF5c0USz1IpTfgzkzPf59/fr.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
 /en  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
 /fr  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
-/it  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
 /_next/image*  url=:url w=:width q=:quality  /.netlify/functions/next_image?url=:url&w=:width&q=:quality  200
