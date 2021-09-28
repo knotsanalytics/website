@@ -1,11 +1,10 @@
 en:
-  hero_title: I am the hero title
-  mision: This is our mission
   mission: This is our mission
-  value: This is our value
   hero: DATA TO ENRICH\nYOUR BUSINESS
   team: THE TEAM
   contact: GET IN TOUCH
 fr:
-  hero_title: I am the hero title in french
   mission: This is our mission
+  hero: DATA TO ENRICH\nYOUR BUSINESS
+  team: THE TEAM
+  contact: GET IN TOUCH
