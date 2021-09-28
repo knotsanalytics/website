@@ -21,7 +21,14 @@ collections:
         file: "src/pages/files/homepage.yml"
         i18n: true
         fields:
-          - { label: Hero Title, name: hero_title, widget: string, i18n: true }
+          - label: "Hero"
+            name: "hero"
+            widget: "relation"
+            collection: "sections"
+            file: hero
+            searchFields: ["title"]
+            display_fields: ["title"]
+            valueField: "title"
           - label: "Mission"
             name: "mission"
             widget: "relation"
@@ -30,11 +37,19 @@ collections:
             searchFields: ["title"]
             display_fields: ["title"]
             valueField: "title"
-          - label: "Value"
-            name: "value"
+          - label: "Team"
+            name: "team"
             widget: "relation"
             collection: "sections"
-            file: value
+            file: team
+            searchFields: ["title"]
+            display_fields: ["title"]
+            valueField: "title"
+          - label: "Contact"
+            name: "contact"
+            widget: "relation"
+            collection: "sections"
+            file: contact
             searchFields: ["title"]
             display_fields: ["title"]
             valueField: "title"
