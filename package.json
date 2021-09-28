@@ -10,16 +10,15 @@
     "start": "next start",
     "export": "next build && next export -o ./dist",
     "test": "jest",
+    "postbuild": "next-on-netlify",
     "postinstall": "netlify-lambda install"
   },
   "dependencies": {
     "@mapbox/rehype-prism": "^0.5.0",
     "@svgr/webpack": "^5.4.0",
-    "@types/dotenv": "^8.2.0",
     "@types/gsap": "^3.0.0",
     "@types/js-yaml": "^3.12.5",
     "axios": "^0.21.4",
-    "critters": "^0.0.10",
     "date-fns": "^2.11.1",
     "dotenv": "^10.0.0",
     "formik": "^2.2.9",

@@ -61,14 +61,14 @@ const Contact: React.FC<ContactProps> = ({
       try {
         const response = await axios.post(
           "/.netlify/functions/next_email",
-          JSON.stringify({
+          {
             contactName: formik.values.name,
             contactEmail: formik.values.email,
             contactMessage: formik.values.message,
-          }),
+          },
           {
             headers: {
-              "Content-Type": "application/json",
+              "Content-Type": "multipart/form-data",
             },
           }
         );
@@ -112,6 +112,7 @@ const Contact: React.FC<ContactProps> = ({
               id="contact-form"
               className={styles.form}
               onSubmit={formik.handleSubmit}
+              encType="multipart/form-data"
               action="#"
               method="POST"
             >
