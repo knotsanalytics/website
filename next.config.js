@@ -7,6 +7,9 @@ module.exports = {
     locales: ["en", "fr"],
     defaultLocale: "en",
   },
+  axios: {
+    baseURL: "/",
+  },
   pageExtensions: ["mdx", "tsx"],
   webpack: (config, { buildId, dev, defaultLoaders, webpack }) => {
     config.module.rules.push(

@@ -58,7 +58,6 @@ const Contact: React.FC<ContactProps> = ({
       message: "",
     },
     onSubmit: async (values) => {
-      console.log(values);
       try {
         const response = await axios.post(
           "/.netlify/functions/send-contact-email",
