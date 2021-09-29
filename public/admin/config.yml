@@ -18,7 +18,7 @@ collections:
     files:
       - label: "HomePage"
         name: "homepage"
-        file: "src/pages/files/homepage.yml"
+        file: "pages/files/homepage.yml"
         i18n: true
         fields:
           - label: "Hero"
@@ -61,7 +61,7 @@ collections:
     files:
       - name: "hero"
         label: "Hero"
-        file: "src/pages/files/hero.yml"
+        file: "pages/files/hero.yml"
         description: "Hero"
         i18n: true
         fields:
@@ -93,7 +93,7 @@ collections:
               widget: "string"
       - name: "mission"
         label: "Mission"
-        file: "src/pages/files/mission.yml"
+        file: "pages/files/mission.yml"
         description: "Our Mission"
         i18n: true
         fields:
@@ -125,7 +125,7 @@ collections:
             }
       - name: "team"
         label: "Team"
-        file: "src/pages/files/team.yml"
+        file: "pages/files/team.yml"
         description: "The Team"
         i18n: true
         fields:
@@ -166,7 +166,7 @@ collections:
             }
       - name: "contact"
         label: "Contact"
-        file: "src/pages/files/contact.yml"
+        file: "pages/files/contact.yml"
         description: "Contact"
         i18n: true
         fields:

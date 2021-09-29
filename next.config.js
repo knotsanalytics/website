@@ -10,4 +10,20 @@ module.exports = {
     locales: ["en", "fr"],
     defaultLocale: "en",
   },
+  webpack: (config, { buildId, dev, defaultLoaders, webpack }) => {
+    config.module.rules.push(
+      ...[
+        {
+          test: /\.yml$/,
+          type: "json",
+          use: "yaml-loader",
+        },
+        {
+          test: /\.svg$/,
+          use: "@svgr/webpack",
+        },
+      ]
+    );
+    return config;
+  },
 };
