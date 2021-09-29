@@ -1,0 +1,229 @@
+cms_manual_init: true,
+
+backend:
+  name: git-gateway
+  branch: master
+media_folder: public/images
+public_folder: /images
+publish_mode: editorial_workflow
+local_backend: true
+
+i18n:
+  structure: single_file
+  locales: [en, fr]
+  default_locale: en
+collections:
+  - name: "pages"
+    label: "Pages"
+    i18n:
+      structure: single_file
+    files:
+      - label: "HomePage"
+        name: "homepage"
+        file: "src/pages/files/homepage.yml"
+        i18n: true
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "relation"
+            collection: "sections"
+            file: hero
+            searchFields: ["title"]
+            display_fields: ["title"]
+            valueField: "title"
+          - label: "Mission"
+            name: "mission"
+            widget: "relation"
+            collection: "sections"
+            file: mission
+            searchFields: ["title"]
+            display_fields: ["title"]
+            valueField: "title"
+          - label: "Team"
+            name: "team"
+            widget: "relation"
+            collection: "sections"
+            file: team
+            searchFields: ["title"]
+            display_fields: ["title"]
+            valueField: "title"
+          - label: "Contact"
+            name: "contact"
+            widget: "relation"
+            collection: "sections"
+            file: contact
+            searchFields: ["title"]
+            display_fields: ["title"]
+            valueField: "title"
+
+  - name: "sections"
+    label: "Sections"
+    i18n:
+      structure: single_file
+    files:
+      - name: "hero"
+        label: "Hero"
+        file: "src/pages/files/hero.yml"
+        description: "Hero"
+        i18n: true
+        fields:
+          - label: Eyebrow
+            name: eyebrow
+            widget: string
+            i18n: true
+          - label: Title
+            name: title
+            widget: string
+            i18n: true
+          - label: Subtitle
+            name: subtitle
+            widget: string
+            i18n: true
+          - label: CTA Label
+            name: ctaLabel
+            widget: string
+            i18n: true
+          - label: "Navigation Tags"
+            name: "navigation_tags"
+            i18n: true
+            widget: "list"
+            summary: "{{fields.tag.tag}}"
+            field:
+              i18n: true
+              label: Tag
+              name: tag
+              widget: "string"
+      - name: "mission"
+        label: "Mission"
+        file: "src/pages/files/mission.yml"
+        description: "Our Mission"
+        i18n: true
+        fields:
+          - {
+              label: Mission Sections,
+              name: missionSections,
+              widget: "list",
+              i18n: true,
+              allow_add: true,
+              collapsed: true,
+              max: 3,
+              min: 3,
+              fields:
+                [
+                  {
+                    label: "Eyebrow",
+                    name: "eyebrow",
+                    widget: "string",
+                    i18n: true,
+                  },
+                  {
+                    label: "Title",
+                    name: "title",
+                    widget: "string",
+                    i18n: true,
+                  },
+                  { label: "Body", name: "body", widget: "string", i18n: true },
+                ],
+            }
+      - name: "team"
+        label: "Team"
+        file: "src/pages/files/team.yml"
+        description: "The Team"
+        i18n: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            i18n: true
+          - label: Subtitle
+            name: subtitle
+            widget: string
+            i18n: true
+          - {
+              label: Members,
+              name: members,
+              widget: "list",
+              i18n: true,
+              allow_add: true,
+              collapsed: true,
+              max: 4,
+              min: 2,
+              fields:
+                [
+                  {
+                    label: "Full Name",
+                    name: "fullName",
+                    widget: "string",
+                    i18n: true,
+                  },
+                  { label: "Role", name: "role", widget: "string", i18n: true },
+                  { label: "Bio", name: "bio", widget: "string", i18n: true },
+                  {
+                    label: "Picture",
+                    name: "picture",
+                    widget: "image",
+                    i18n: duplicate,
+                  },
+                ],
+            }
+      - name: "contact"
+        label: "Contact"
+        file: "src/pages/files/contact.yml"
+        description: "Contact"
+        i18n: true
+        fields:
+          - label: Eyebrow
+            name: eyebrow
+            widget: string
+            i18n: true
+          - label: Title
+            name: title
+            widget: string
+            i18n: true
+          - label: Email
+            name: email
+            widget: string
+            i18n: duplicate
+          - label: Address
+            name: address
+            widget: string
+            i18n: true
+          - label: Phone
+            name: phone
+            widget: string
+            i18n: duplicate
+          - label: Linkedin
+            name: linkedin
+            widget: string
+            i18n: true
+          - label: "Contact Form"
+            name: "contactForm"
+            collapsed: true
+            widget: "object"
+            i18n: true
+            fields:
+              - {
+                  label: Name Label,
+                  name: nameLabel,
+                  widget: string,
+                  i18n: true,
+                }
+              - {
+                  label: Email Label,
+                  name: emailLabel,
+                  widget: string,
+                  i18n: true,
+                }
+              - {
+                  label: Message Label,
+                  name: messageLabel,
+                  widget: string,
+                  i18n: true,
+                }
+              - { label: Cta Label, name: ctaLabel, widget: string, i18n: true }
+              - {
+                  label: Confirmation Message,
+                  name: confirmationMessage,
+                  widget: string,
+                  i18n: true,
+                }
