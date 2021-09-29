@@ -14,14 +14,14 @@ const DETAILS_MIN_LENGTH = 10;
 const DETAILS_MAX_LENGTH = 1e3;
 
 const handler = async (event) => {
-  console.log(process.env.CONTACT_EMAIL);
   if (!process.env.CONTACT_EMAIL) {
     return {
       statusCode: 500,
       body: "process.env.CONTACT_EMAIL must be defined",
     };
   }
-
+  console.log("event.body");
+  console.log(event.body);
   const body = JSON.parse(event.body);
 
   try {
@@ -57,7 +57,7 @@ const handler = async (event) => {
   }
 
   const descriptor = {
-    from: body.email,
+    from: `"${body.email}" <no-reply@gql-modules.com>`,
     to: process.env.CONTACT_EMAIL,
     subject: `${body.name} sent you a message from gql-modules.com`,
     text: body.details,
