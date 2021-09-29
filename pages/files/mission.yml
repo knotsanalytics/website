@@ -1,0 +1,32 @@
+en:
+  missionSections:
+    - eyebrow: WHAT WE DO
+      title: WE TACKLE COMPLEX PROBLEMS
+      body:
+        With our in-depth understanding and knowledge of big data we can develop
+        the best solutions for you.
+    - eyebrow: HOW WE DO IT
+      title: WE ARE EXPERTS IN DATA ANALYSIS
+      body: and high-performance computing and we focus on deep learning and
+        data-driven predictive analytics.
+    - eyebrow: WHY WE DO IT
+      body:
+        With our in-depth understanding and knowledge of big data we can develop
+        the best solutions for you.
+      title: WE CAN HELP YOUR BUSINESS
+fr:
+  missionSections:
+    - eyebrow: WHAT WE DO
+      title: WE TACKLE COMPLEX PROBLEMS
+      body:
+        With our in-depth understanding and knowledge of big data we can develop
+        the best solutions for you.
+    - eyebrow: HOW WE DO IT
+      title: WE ARE EXPERTS IN DATA ANALYSIS
+      body: and high-performance computing and we focus on deep learning and
+        data-driven predictive analytics.
+    - eyebrow: WHY WE DO IT
+      body:
+        With our in-depth understanding and knowledge of big data we can develop
+        the best solutions for you.
+      title: WE CAN HELP YOUR BUSINESS
