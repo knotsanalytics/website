@@ -1,11 +1,7 @@
 require("dotenv").config();
 
-const {
-  MAILGUN_API_KEY,
-  MAILGUN_DOMAIN,
-  MAILGUN_URL,
-  CONTACT_TO_EMAIL_ADDRESS,
-} = process.env;
+const { MAILGUN_API_KEY, MAILGUN_DOMAIN, MAILGUN_URL, CONTACT_EMAIL } =
+  process.env;
 
 const mailgun = require("mailgun-js")({
   apiKey: MAILGUN_API_KEY,
@@ -14,8 +10,6 @@ const mailgun = require("mailgun-js")({
 });
 
 exports.handler = async (event) => {
-  console.log("mailgun");
-  console.log(mailgun);
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
@@ -25,18 +19,18 @@ exports.handler = async (event) => {
   }
 
   const data = JSON.parse(event.body);
-  if (!data.contactName || !data.contactEmail || !data.contactMessage) {
+  if (!data.name || !data.email || !data.details) {
     return { statusCode: 422, body: "Name, email, and message are required." };
   }
 
   var FormData = require("form-data");
   let formData = new FormData();
   formData = {
-    from: data.contactEmail,
-    to: CONTACT_TO_EMAIL_ADDRESS,
-    "h:Reply-To": data.contactEmail,
-    subject: `New message from ${data.contactName}`,
-    text: `${data.contactMessage}`,
+    from: data.email,
+    to: CONTACT_EMAIL,
+    "h:Reply-To": data.email,
+    subject: `New message from ${data.name}`,
+    text: `${data.details}`,
   };
 
   return mailgun
