@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { throttle } from "lodash";
 
-function useDocumentScrollThrottled(callback) {
+function useDocumentScrollThrottled(callback: any) {
   const [, setScrollPosition] = useState(0);
   let previousScrollTop = 0;
 

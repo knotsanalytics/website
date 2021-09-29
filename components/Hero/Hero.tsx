@@ -11,7 +11,7 @@ export type HeroProps = {
 
 const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
   const handleGetInTouch = () => {
-    document.getElementById("contact").scrollIntoView();
+    document.getElementById("contact")?.scrollIntoView();
   };
 
   return (

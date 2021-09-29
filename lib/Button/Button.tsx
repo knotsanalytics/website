@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       className={cn(styles.button, className)}
       type={type}
-      onClick={onClicked ? onClicked : null}
+      onClick={onClicked ? onClicked : undefined}
       disabled={disabled}
     >
       {label}

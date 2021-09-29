@@ -21,7 +21,7 @@ const Navigation: React.FC<NavigationProps> = ({ navItems, handleElClick }) => {
         <a
           className={styles.navEl}
           key={idx}
-          onClick={() => handleElClick(idx)}
+          onClick={handleElClick ? () => handleElClick(idx) : undefined}
         >
           {item}
         </a>
@@ -32,13 +32,14 @@ const Navigation: React.FC<NavigationProps> = ({ navItems, handleElClick }) => {
           <img src="/images/chevron-down.svg" alt="language" />
         </p>
         <div className={`${styles.dropdown} ${DD ? styles.show : ""}`}>
-          {locales
-            .filter((item) => item !== locale)
-            .map((item) => (
-              <Link href="/" locale={String(item)} key={item}>
-                <a>{String(item).toUpperCase()}</a>
-              </Link>
-            ))}
+          {locales &&
+            locales
+              .filter((item) => item !== locale)
+              .map((item) => (
+                <Link href="/" locale={String(item)} key={item}>
+                  <a>{String(item).toUpperCase()}</a>
+                </Link>
+              ))}
         </div>
       </div>
     </div>

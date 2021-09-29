@@ -31,10 +31,10 @@ export default function Index({ hero, mission, team, contact }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const hero = gePageData("hero")[locale];
-  const mission = gePageData("mission")[locale];
-  const team = gePageData("team")[locale];
-  const contact = gePageData("contact")[locale];
+  const hero = gePageData("hero")[locale ? locale : "en"];
+  const mission = gePageData("mission")[locale ? locale : "en"];
+  const team = gePageData("team")[locale ? locale : "en"];
+  const contact = gePageData("contact")[locale ? locale : "en"];
 
   return {
     props: {

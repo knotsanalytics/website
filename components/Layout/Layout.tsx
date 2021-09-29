@@ -10,14 +10,14 @@ type Props = {
   navItems: string[];
 };
 export default function Layout({ navItems, children }: Props) {
-  const myRef = useRef(null);
+  const myRef = useRef<HTMLDivElement>(null);
   const [shouldHideHeader, setShouldHideHeader] = useState(false);
   const [shouldShowShadow, setShouldShowShadow] = useState(false);
 
   const MINIMUM_SCROLL = 80;
   const TIMEOUT_DELAY = 400;
 
-  useDocumentScrollThrottled((callbackData) => {
+  useDocumentScrollThrottled((callbackData: any) => {
     const { previousScrollTop, currentScrollTop } = callbackData;
     const isScrolledDown = previousScrollTop < currentScrollTop;
     const isMinimumScrolled = currentScrollTop > MINIMUM_SCROLL;
@@ -30,7 +30,7 @@ export default function Layout({ navItems, children }: Props) {
   });
 
   const onNavElClicked = (idx: number) => {
-    if (!!myRef.current.children[idx + 1]) {
+    if (myRef && myRef.current && myRef.current.children[idx + 1]) {
       myRef.current.children[idx + 1].scrollIntoView();
     }
   };
