@@ -64,7 +64,7 @@ const Contact: React.FC<ContactProps> = ({
           },
           {
             headers: {
-              "Content-Type": "multipart/form-data",
+              "Content-Type": "application/json",
             },
           }
         );
@@ -108,7 +108,7 @@ const Contact: React.FC<ContactProps> = ({
               id="contact-form"
               className={styles.form}
               onSubmit={formik.handleSubmit}
-              encType="multipart/form-data"
+              encType="text/plain"
               action="#"
               method="POST"
             >
