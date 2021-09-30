@@ -1,4 +1,5 @@
 require("dotenv").config();
+const process = require("process");
 
 const { MAILGUN_API_KEY, MAILGUN_DOMAIN, MAILGUN_URL, CONTACT_EMAIL } =
   process.env;
@@ -9,7 +10,9 @@ const mailgun = require("mailgun-js")({
   url: MAILGUN_URL,
 });
 
-exports.handler = async (event) => {
+module.exports.handler = async (event) => {
+  console.log("CONTACT_EMAIL");
+  console.log(CONTACT_EMAIL);
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
