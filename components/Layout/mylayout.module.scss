@@ -21,7 +21,7 @@
     transition: transform 0.3s ease, background-color 0.3s ease;
     z-index: 999;
     &.shadow {
-      background-color: $off-white;
+      background-color: $white;
       box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
       transition: transform 0.3s ease, background-color 0.3s ease;
     }

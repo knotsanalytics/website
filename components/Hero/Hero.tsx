@@ -19,12 +19,19 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
   return (
     <div className={cn(styles.container)}>
       <div className={cn("grid")}>
-        <div className={cn("col-12")}>
-          <h1 className={"fadeInUp"}>{title}</h1>
+        <h5 className={styles.eyebrow}>{eyebrow}</h5>
+        <div
+          className={cn(
+            "col-12 col-start-md-3 col-end-md-10 col-start-lg-4 col-end-lg-9"
+          )}
+        >
+          <h1 className={"fadeInUp"}>
+            We help <span>businesses</span> make the most out of their data
+          </h1>
         </div>
         <div
           className={
-            "col-12 col-start-md-4 col-end-md-9 col-start-lg-4 col-end-lg-9 "
+            "col-12 col-start-md-3 col-end-md-10 col-start-lg-3 col-end-lg-10 "
           }
         >
           <p className={"fadeInUp"}>{subtitle}</p>

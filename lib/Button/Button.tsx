@@ -10,6 +10,7 @@ export type ButtonProps = {
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
   className?: string;
+  secondary?: boolean;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,10 +19,13 @@ const Button: React.FC<ButtonProps> = ({
   type,
   disabled,
   className,
+  secondary,
 }) => {
   return (
     <button
-      className={cn(styles.button, className)}
+      className={cn(styles.button, className, {
+        [styles.secondary]: secondary,
+      })}
       type={type}
       onClick={onClicked ? onClicked : undefined}
       disabled={disabled}

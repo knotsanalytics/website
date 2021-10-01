@@ -84,18 +84,22 @@ const Contact: React.FC<ContactProps> = ({
   return (
     <div className={styles.contactContainer} id={"contact"}>
       <div className={cn(`grid`, styles.grid)}>
-        <div className={`col-12 col-md-6 col-start-lg-2 col-end-lg-6`}>
-          <h2 className={cn(styles.headline, "fadeInUp")}>{title}</h2>
-        </div>
-        <div className={`col-12 col-md-6 col-start-lg-7 col-end-lg-11`}>
-          <p className={cn("large fadeInUp", styles.subtitle)}>
-            We are always looking for new collaborations and exciting
-            opportunities. Drop us a line, we will be in touch as soon as we
-            can.
+        <div
+          className={`col-12 col-start-md-4 col-end-md-9 col-start-lg-4 col-end-lg-9 `}
+        >
+          <h2 className={cn(styles.headline, "fadeInUp")}>
+            Get in <span>Touch</span>
+          </h2>
+          <p className={cn(" fadeInUp", styles.subtitle)}>
+            Have a project for us, or just want to say hi? Feel free to send us
+            an email at <span>knots.analytics@gmail.com</span> or use the form
+            below.
           </p>
         </div>
 
-        <div className={`col-12 col-md-8 col-start-lg-2 col-end-lg-8`}>
+        <div
+          className={`col-12 col-start-md-4 col-end-md-9 col-start-lg-4 col-end-lg-9`}
+        >
           <form
             id="contact-form"
             className={styles.form}
@@ -104,93 +108,87 @@ const Contact: React.FC<ContactProps> = ({
             action="#"
             method="POST"
           >
-            <div className={styles.inputsWrap}>
-              <label htmlFor="name" className={`fadeInUp`}>
-                {contactForm.nameLabel}
-                <span className={styles.error}>
-                  {getVisibleError(formik, "name")}
-                </span>
-              </label>
-              <input
-                type="text"
-                className={`${styles.formControl} fadeInUp`}
-                id={"name"}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.name}
-                name={"name"}
-                disabled={loading}
-              />
+            {/* <label htmlFor="name" className={`fadeInUp`}>
+              {contactForm.nameLabel}
+              <span className={styles.error}>
+                {getVisibleError(formik, "name")}
+              </span>
+            </label> */}
+            <input
+              type="text"
+              className={`${styles.formControl} fadeInUp`}
+              id={"name"}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
+              name={"name"}
+              disabled={loading}
+              placeholder={contactForm.nameLabel}
+            />
 
-              <label htmlFor="email" className={`fadeInUp`}>
-                {contactForm.emailLabel}
-                <span className={styles.error}>
-                  {getVisibleError(formik, "email")}
-                </span>
-              </label>
-              <input
-                type="email"
-                className={`${styles.formControl} fadeInUp`}
-                id={"email"}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.email}
-                name={"email"}
-                disabled={loading}
-              />
-              <Button
-                label={contactForm.ctaLabel}
-                type="submit"
-                className={cn(styles.ctaDesktop, "fadeInUp")}
-                disabled={loading}
-              />
-            </div>
-            <div className={styles.areaWrap}>
-              <label htmlFor="message" className={`fadeInUp`}>
-                {contactForm.messageLabel}
-                <span className={styles.error}>
-                  {getVisibleError(formik, "message")}
-                </span>
-              </label>
-              <textarea
-                className={`${styles.formControl} fadeInUp`}
-                id={"message"}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.message}
-                name={"message"}
-                disabled={loading}
-              />
-              <Button
-                label={contactForm.ctaLabel}
-                type="submit"
-                className={cn(styles.ctaMobile, "fadeInUp")}
-                disabled={loading}
-              />
-            </div>
+            {/* <label htmlFor="email" className={`fadeInUp`}>
+              <span className={styles.error}>
+                {getVisibleError(formik, "email")}
+              </span>
+            </label> */}
+            <input
+              type="email"
+              className={`${styles.formControl} fadeInUp`}
+              id={"email"}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+              name={"email"}
+              disabled={loading}
+              placeholder={contactForm.emailLabel}
+            />
+
+            {/* <label htmlFor="message" className={`fadeInUp`}>
+              {contactForm.messageLabel}
+              <span className={styles.error}>
+                {getVisibleError(formik, "message")}
+              </span>
+            </label> */}
+            <textarea
+              className={`${styles.formControl} fadeInUp`}
+              id={"message"}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
+              name={"message"}
+              disabled={loading}
+              placeholder={contactForm.messageLabel}
+            />
+            <Button
+              label={contactForm.ctaLabel}
+              type="submit"
+              className={cn(styles.cta, "fadeInUp")}
+              disabled={loading}
+              secondary
+            />
           </form>
         </div>
-
-        <div
-          className={`col-12 col-md-4 col-start-lg-10 col-end-lg-11 ${styles.itemsCol}`}
+      </div>
+      <div className={styles.footer}></div>
+      {/* <div
+        className={`col-12 col-md-4 col-start-lg-10 col-end-lg-11 ${styles.itemsCol}`}
+      >
+        <a
+          target="_blank"
+          href={linkedin}
+          className={cn(styles.linkedin, "fadeInUp")}
         >
-          <a
-            target="_blank"
-            href={linkedin}
-            className={cn(styles.linkedin, "fadeInUp")}
-          >
-            linkedin
-          </a>
-          <p className={cn(styles.mail, "fadeInUp")}>{email}</p>
-          <p className={cn(styles.phone, "fadeInUp")}>{phone}</p>
+          linkedin
+        </a>
+        <p className={cn(styles.mail, "fadeInUp")}>{email}</p>
+        <p className={cn(styles.phone, "fadeInUp")}>{phone}</p>
 
-          <p className={cn(styles.address, "fadeInUp")}>{address}</p>
-        </div>
+        <p className={cn(styles.address, "fadeInUp")}>{address}</p>
       </div>
       <div className={styles.divider}></div>
       <p className={styles.copyrights}>
         {"Copyright @2020 All rights reserved"}
-      </p>
+      </p> */}
     </div>
   );
 };

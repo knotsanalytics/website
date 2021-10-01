@@ -1,21 +1,32 @@
 @import "styles/variables";
 
 .contactContainer {
-  padding: 100px 0 50px;
+  padding: 150px 0 0 0;
+  background-color: $dark-blue;
   position: relative;
   @media only screen and (min-width: $breakpoint-md) {
-    padding: 200px 0 20px 0;
+    padding: 150px 0 0 0;
   }
 }
 
 .headline {
   margin-bottom: 32px;
+  color: $white;
+  text-align: center;
+  span {
+    color: $yellow;
+  }
 }
 .subtitle {
-  margin-top: 55px;
+  text-align: center;
   margin-bottom: 50px;
+  color: $white;
   @media only screen and (min-width: $breakpoint-md) {
-    margin-bottom: 150px;
+    margin-bottom: 90px;
+  }
+  span {
+    color: $yellow;
+    text-decoration: underline;
   }
 }
 
@@ -24,26 +35,13 @@
   flex-direction: column;
   @media only screen and (min-width: $breakpoint-md) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
-  .inputsWrap {
-    width: 100%;
 
-    @media only screen and (min-width: $breakpoint-md) {
-      margin-right: 15px;
-    }
-  }
-  .areaWrap {
-    width: 100%;
-    @media only screen and (min-width: $breakpoint-md) {
-      margin-left: 15px;
-    }
-
-    // height: 100%;
-  }
   label {
     margin-bottom: 10px;
     position: relative;
-    color: $white;
+    color: $black;
     display: block;
     .error {
       margin-left: 10px;
@@ -55,27 +53,42 @@
   input {
     margin-bottom: 30px;
     height: 44px;
-    border: 1px solid $white;
-    color: $white;
-    background-color: $black;
+    border: 1px solid $black;
+    color: $black;
+    background-color: $white;
     outline: none;
     padding: 5px;
     width: 100%;
+    border-radius: 10px;
     &:active,
     &:focus {
       outline: none;
-      border: 2px solid $white;
+      border: 2px solid $black;
     }
     &:disabled {
       opacity: 0.7;
       cursor: not-allowed;
     }
+    @media only screen and (min-width: $breakpoint-md) {
+      width: calc(50% - 15px);
+    }
+    &:first-child {
+      @media only screen and (min-width: $breakpoint-md) {
+        margin-right: 15px;
+      }
+    }
+    &:nth-child(2) {
+      @media only screen and (min-width: $breakpoint-md) {
+        margin-left: 15px;
+      }
+    }
   }
   textarea {
     // margin-bottom: 30px;
-    border: 1px solid $white;
-    color: $white;
-    background-color: $black;
+    border: 1px solid $black;
+    border-radius: 10px;
+    color: $black;
+    background-color: $white;
     height: 100px;
     resize: none;
     outline: none;
@@ -85,35 +98,29 @@
     margin-bottom: 32px;
     @media only screen and (min-width: $breakpoint-md) {
       margin-bottom: 32px;
-      height: 90%;
+      height: 90px;
     }
 
     &:active,
     &:focus {
       outline: none;
-      border: 2px solid $white;
+      border: 2px solid $black;
     }
     &:disabled {
       opacity: 0.7;
       cursor: not-allowed;
     }
   }
-  .ctaMobile {
+  .cta {
     width: fit-content;
     display: block;
     margin-bottom: 100px;
-    @media only screen and (min-width: $breakpoint-md) {
-      display: none;
-    }
   }
-  .ctaDesktop {
-    width: fit-content;
-    display: none;
+}
 
-    @media only screen and (min-width: $breakpoint-md) {
-      display: block;
-    }
-  }
+.footer {
+  background-color: $darker-blue;
+  padding: 100px 0 30px 0;
 }
 
 .itemsCol {
@@ -123,13 +130,13 @@
   padding-bottom: 0px;
   a,
   p {
-    color: $white;
+    color: $black;
     margin-bottom: 12px;
     opacity: 0.7;
   }
   a:hover {
     opacity: 1;
-    color: $white;
+    color: $black;
   }
 }
 
@@ -165,7 +172,7 @@
   margin: auto;
   margin-top: 60px;
   margin-bottom: 20px;
-  background-color: $white;
+  background-color: $black;
   opacity: 0.7;
   @media only screen and (min-width: $breakpoint-md) {
     margin-top: 140px;
@@ -173,7 +180,7 @@
   }
 }
 .copyrights {
-  font-family: $serif_font_family;
+  font-family: $mono_font_family;
   font-size: 12px;
   text-align: center;
   margin: auto;

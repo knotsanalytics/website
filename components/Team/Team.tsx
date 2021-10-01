@@ -18,33 +18,42 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
   return (
     <div className={styles.teamContainer}>
       <div className={cn(`grid`, styles.grid)}>
-        <div className={`col-12 `}>
-          <h2 className={cn(styles.title, "fadeInUp")}>{title}</h2>
+        <div className={`col-12 col-lg-6`}>
+          <h2 className={cn(styles.title, "fadeInUp")}>
+            Meet the <span>Founders</span>
+          </h2>
+          <p className={styles.subtitle}>
+            KNOTS is a data science company providing solutions to address the
+            needs of your business and to help you to reach your goals.
+          </p>
         </div>
         {members.map((member, idx) => (
-          <React.Fragment key={member.fullName}>
-            <div
-              className={cn(
-                "col-12 col-start-md-2 col-end-md-4 col-start-lg-2 col-end-lg-4"
-              )}
-            >
-              <div className={styles.meta}>
-                <h3 className={"fadeInUp"}>{member.fullName}</h3>
-                <p className={"small fadeInUp"}>{member.role}</p>
+          <div
+            key={member.fullName}
+            className={cn(
+              styles.memberWrap,
+              {
+                ["col-12 col-start-md-3 col-end-md-6 col-start-lg-3 col-end-lg-6"]:
+                  idx === 0,
+              },
+              {
+                ["col-12 col-start-md-7 col-end-md-10 col-start-lg-7 col-end-lg-10"]:
+                  idx === 1,
+              }
+            )}
+          >
+            <div className={styles.meta}>
+              <div className={styles.imgContainer}>
                 <div className={cn(styles.imgWrap, "fadeInUp")}>
                   <img src={member.picture} alt={member.fullName} />
+                  <div className={styles.arrowContainer}></div>
                 </div>
               </div>
+
+              <h3 className={"fadeInUp"}>{member.fullName}</h3>
+              <h5 className={"small fadeInUp"}>{member.role}</h5>
             </div>
-            <div
-              className={cn(
-                styles.bioWrap,
-                "col-12 col-md-8 col-start-md-5 col-end-md-11 col-start-lg-5 col-end-lg-11"
-              )}
-            >
-              <p className={"fadeInUp"}>{member.bio}</p>
-            </div>
-          </React.Fragment>
+          </div>
         ))}
       </div>
     </div>

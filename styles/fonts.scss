@@ -1,76 +1,41 @@
 @font-face {
-  font-family: "Roboto";
+  font-family: "IBM-Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/fonts/Roboto-Regular.ttf") format("ttf");
+  src: url("assets/fonts/IBMPlexSans-Regular.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "IBM-Medium";
   font-style: normal;
   font-weight: 500;
-  src: url("../assets/fonts/Roboto-Medium.ttf") format("ttf");
+  src: url("assets/fonts/IBMPlexSans-Medium.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "Roboto";
+  font-family: "IBM-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: url("assets/fonts/IBMPlexSans-SemiBold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "IBM-Bold";
   font-style: normal;
   font-weight: 700;
-  src: url("../assets/fonts/Roboto-Bold.ttf") format("ttf");
+  src: url("assets/fonts/IBMPlexSans-Bold.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "GT America";
-  src: url("assets/fonts/GT-America/GT-America-Standard-Bold.woff2")
-    format("woff2");
-  //url('/static/font/GT-America/GT-America-Standard-Bold.eot') format('embedded-opentype')
-  //url('/static/font/GT-America/GT-America-Standard-Bold.ttf') format('truetype')
-  //url('/static/font/GT-America/GT-America-Standard-Bold.woff2') format('woff2');
+  font-family: "IBM-Mono";
   font-style: normal;
-  font-weight: bold;
-  font-display: swap;
+  font-weight: 400;
+  src: url("../assets/fonts/IBMPlexMono-Regular.ttf") format("ttf");
 }
-//
+
 @font-face {
-  font-family: "GT America";
-  src: url("assets/fonts/GT-America/GT-America-Standard-Medium.woff2")
-    format("woff2");
-  //url('/static/font/GT-America/GT-America-Standard-Medium.eot') format('embedded-opentype')
-  //url('/static/font/GT-America/GT-America-Standard-Medium.ttf') format('truetype')
-  //url('/static/font/GT-America/GT-America-Standard-Medium.woff2') format('woff2');
+  font-family: "IBM-Condensed-Bold";
   font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "GT America";
-  src: url("assets/fonts/GT-America/GT-America-Standard-Regular.woff2")
-    format("woff2");
-  //url('/static/font/GT-America/GT-America-Standard-Regular.eot') format('embedded-opentype')
-  //url('/static/font/GT-America/GT-America-Standard-Regular.ttf') format('truetype')
-  //url('/static/font/GT-America/GT-America-Standard-Regular.woff2') format('woff2');
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Quarto Light";
-  font-display: swap;
-  src: url("assets/fonts/Quarto/Quarto-Light.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Quarto Medium";
-  font-display: swap;
-  font-weight: 500;
-  src: url("assets/fonts/Quarto/quarto-medium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Quarto Bold";
-  font-display: swap;
   font-weight: 700;
-  src: url("assets/fonts/Quarto/Quarto-Bold.ttf") format("ttf");
+  src: url("../assets/fonts/IBMPlexSansCondensed-Bold.ttf") format("ttf");
 }
