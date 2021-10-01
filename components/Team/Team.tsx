@@ -19,25 +19,32 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
     <div className={styles.teamContainer}>
       <div className={cn(`grid`, styles.grid)}>
         <div className={`col-12 `}>
-          <h2 className={styles.title}>{title}</h2>
-          <h3 className={styles.subtitle}>{subtitle}</h3>
+          <h2 className={cn(styles.title, "fadeInUp")}>{title}</h2>
         </div>
         {members.map((member, idx) => (
-          <div
-            key={idx}
-            className={`${styles.cardCol} col-12 col-md-6 col-start-lg-${
-              idx * 4 + 3
-            } col-end-lg-${idx * 4 + 6}`}
-          >
-            <section className={styles.card}>
-              <div className={styles.imgWrap}>
-                <img src={member.picture} alt={member.fullName} />
+          <React.Fragment key={member.fullName}>
+            <div
+              className={cn(
+                "col-12 col-start-md-2 col-end-md-4 col-start-lg-2 col-end-lg-4"
+              )}
+            >
+              <div className={styles.meta}>
+                <h3 className={"fadeInUp"}>{member.fullName}</h3>
+                <p className={"small fadeInUp"}>{member.role}</p>
+                <div className={cn(styles.imgWrap, "fadeInUp")}>
+                  <img src={member.picture} alt={member.fullName} />
+                </div>
               </div>
-              <h3 className={styles.name}>{member.fullName}</h3>
-              <h3 className={styles.role}>{member.role}</h3>
-              <p className={styles.bio}>{member.bio}</p>
-            </section>
-          </div>
+            </div>
+            <div
+              className={cn(
+                styles.bioWrap,
+                "col-12 col-md-8 col-start-md-5 col-end-md-11 col-start-lg-5 col-end-lg-11"
+              )}
+            >
+              <p className={"fadeInUp"}>{member.bio}</p>
+            </div>
+          </React.Fragment>
         ))}
       </div>
     </div>

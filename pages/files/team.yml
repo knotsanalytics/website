@@ -1,8 +1,9 @@
 en:
-  title: THE TEAM
+  title: Meet The Team
   subtitle: Something About the team
   members:
-    - bio: I am a computer and data scientist with a Ph.D. in Theoretical Physics.
+    - bio:
+        I am a computer and data scientist with a Ph.D. in Theoretical Physics.
         During my years in research, I focused on Quantum Gravity and on a
         numerical approach to gravitational physics. Here I developed
         high-performance solutions as well as machine and deep-learning
@@ -16,7 +17,8 @@ en:
     - fullName: Simone Fuscone
       role: CTO
       picture: /images/photo-1550745165-9bc0b252726f.jpeg
-      bio: I am a machine learning engineer that pursued a Ph.D. in computational
+      bio:
+        I am a machine learning engineer that pursued a Ph.D. in computational
         linguistics. I started data analysis during my master in physics where I
         modeled spatial and neurological data. After I had the opportunity to
         manage, analyze big financial databases, working in the IT sector for
@@ -30,7 +32,8 @@ fr:
   members:
     - fullName: Giorgio Sarno
       role: President
-      bio: I am a computer and data scientist with a Ph.D. in Theoretical Physics.
+      bio:
+        I am a computer and data scientist with a Ph.D. in Theoretical Physics.
         During my years in research, I focused on Quantum Gravity and on a
         numerical approach to gravitational physics. Here I developed
         high-performance solutions as well as machine and deep-learning
@@ -42,7 +45,8 @@ fr:
     - picture: /images/photo-1550745165-9bc0b252726f.jpeg
       fullName: Simone Fuscone
       role: CTO
-      bio: I am a machine learning engineer that pursued a Ph.D. in computational
+      bio:
+        I am a machine learning engineer that pursued a Ph.D. in computational
         linguistics. I started data analysis during my master in physics where I
         modeled spatial and neurological data. After I had the opportunity to
         manage, analyze big financial databases, working in the IT sector for

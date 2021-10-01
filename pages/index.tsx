@@ -7,6 +7,8 @@ import Contact, { ContactProps } from "../components/Contact/Contact";
 import React, { useEffect } from "react";
 import BasicMeta from "../components/meta/BasicMeta";
 import Layout from "../components/Layout/Layout";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 type Props = {
   hero: HeroProps;
@@ -17,8 +19,30 @@ type Props = {
 
 export default function Index({ hero, mission, team, contact }: Props) {
   useEffect(() => {
+    initAnimations();
     window.history.scrollRestoration = "manual";
   }, []);
+
+  const initAnimations = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    /////////////////////
+    //// Fade in up /////
+    /////////////////////
+    const fadeInUpTween = document.querySelectorAll(".fadeInUp");
+    fadeInUpTween.forEach((item, idx) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 95%",
+        },
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        ease: "Power2.easeOut",
+      });
+    });
+  };
   return (
     <Layout navItems={hero.navigation_tags}>
       <BasicMeta url={"/"} />

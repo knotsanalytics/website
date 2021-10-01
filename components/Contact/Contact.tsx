@@ -46,6 +46,7 @@ const Contact: React.FC<ContactProps> = ({
   contactForm,
 }) => {
   const [messageSent, setMessageSent] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const formik = useFormik({
     initialValues: {
@@ -54,6 +55,7 @@ const Contact: React.FC<ContactProps> = ({
       message: "",
     },
     onSubmit: async (values) => {
+      setLoading(true);
       try {
         const response = await axios.post(
           "/.netlify/functions/next_email",
@@ -70,6 +72,7 @@ const Contact: React.FC<ContactProps> = ({
         );
 
         formik.resetForm();
+        setLoading(false);
         setMessageSent(true);
       } catch (error) {
         console.error(error);
@@ -81,38 +84,28 @@ const Contact: React.FC<ContactProps> = ({
   return (
     <div className={styles.contactContainer} id={"contact"}>
       <div className={cn(`grid`, styles.grid)}>
-        <div
-          className={`col-12 col-start-md-2 col-end-md-7 col-start-lg-2 col-end-lg-6 ${styles.eyebrowRow}`}
-        >
-          <h3 className={styles.eyebrow}>{eyebrow}</h3>
-          <div className={styles.separator}></div>
+        <div className={`col-12 col-md-6 col-start-lg-2 col-end-lg-6`}>
+          <h2 className={cn(styles.headline, "fadeInUp")}>{title}</h2>
         </div>
-        <div
-          className={`col-12 col-start-md-2 col-end-md-7 col-start-lg-2 col-end-lg-6`}
-        >
-          <h2 className={styles.headline}>{title}</h2>
+        <div className={`col-12 col-md-6 col-start-lg-7 col-end-lg-11`}>
+          <p className={cn("large fadeInUp", styles.subtitle)}>
+            We are always looking for new collaborations and exciting
+            opportunities. Drop us a line, we will be in touch as soon as we
+            can.
+          </p>
         </div>
-        <div
-          className={`col-12 col-start-md-2 col-end-md-6 col-start-lg-2 col-end-lg-6`}
-        >
-          <div className={styles.card}>
-            <div
-              className={cn(styles.confirmDialog, {
-                [styles.active]: messageSent,
-              })}
-            >
-              <p>{contactForm.confirmationMessage}</p>
-            </div>
 
-            <form
-              id="contact-form"
-              className={styles.form}
-              onSubmit={formik.handleSubmit}
-              encType="text/plain"
-              action="#"
-              method="POST"
-            >
-              <label htmlFor="name" className={``}>
+        <div className={`col-12 col-md-8 col-start-lg-2 col-end-lg-8`}>
+          <form
+            id="contact-form"
+            className={styles.form}
+            onSubmit={formik.handleSubmit}
+            encType="text/plain"
+            action="#"
+            method="POST"
+          >
+            <div className={styles.inputsWrap}>
+              <label htmlFor="name" className={`fadeInUp`}>
                 {contactForm.nameLabel}
                 <span className={styles.error}>
                   {getVisibleError(formik, "name")}
@@ -120,15 +113,16 @@ const Contact: React.FC<ContactProps> = ({
               </label>
               <input
                 type="text"
-                className={`${styles.formControl} `}
+                className={`${styles.formControl} fadeInUp`}
                 id={"name"}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.name}
                 name={"name"}
+                disabled={loading}
               />
 
-              <label htmlFor="email" className={`fade-in-up`}>
+              <label htmlFor="email" className={`fadeInUp`}>
                 {contactForm.emailLabel}
                 <span className={styles.error}>
                   {getVisibleError(formik, "email")}
@@ -136,52 +130,67 @@ const Contact: React.FC<ContactProps> = ({
               </label>
               <input
                 type="email"
-                className={`${styles.formControl} fade-in-up`}
+                className={`${styles.formControl} fadeInUp`}
                 id={"email"}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
                 name={"email"}
+                disabled={loading}
               />
-
-              <label htmlFor="message" className={``}>
+              <Button
+                label={contactForm.ctaLabel}
+                type="submit"
+                className={cn(styles.ctaDesktop, "fadeInUp")}
+                disabled={loading}
+              />
+            </div>
+            <div className={styles.areaWrap}>
+              <label htmlFor="message" className={`fadeInUp`}>
                 {contactForm.messageLabel}
                 <span className={styles.error}>
                   {getVisibleError(formik, "message")}
                 </span>
               </label>
               <textarea
-                className={`${styles.formControl} `}
+                className={`${styles.formControl} fadeInUp`}
                 id={"message"}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.message}
                 name={"message"}
+                disabled={loading}
               />
-
               <Button
                 label={contactForm.ctaLabel}
                 type="submit"
-                className={styles.cta}
+                className={cn(styles.ctaMobile, "fadeInUp")}
+                disabled={loading}
               />
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
+
         <div
-          className={`${styles.itemsCol} col-12 col-start-md-8 col-end-md-12 col-start-lg-9 col-end-lg-12`}
+          className={`col-12 col-md-4 col-start-lg-10 col-end-lg-11 ${styles.itemsCol}`}
         >
-          <label>Phone Number</label>
-          <p className={styles.phone}>{phone}</p>
-          <label>Email</label>
-          <p className={styles.mail}>{email}</p>
-          <label>Linkedin</label>
-          <a target="_blank" href={linkedin} className={styles.linkedin}>
-            linkedin/knots.com
+          <a
+            target="_blank"
+            href={linkedin}
+            className={cn(styles.linkedin, "fadeInUp")}
+          >
+            linkedin
           </a>
-          <label>Address</label>
-          <p className={styles.address}>{address}</p>
+          <p className={cn(styles.mail, "fadeInUp")}>{email}</p>
+          <p className={cn(styles.phone, "fadeInUp")}>{phone}</p>
+
+          <p className={cn(styles.address, "fadeInUp")}>{address}</p>
         </div>
       </div>
+      <div className={styles.divider}></div>
+      <p className={styles.copyrights}>
+        {"Copyright @2020 All rights reserved"}
+      </p>
     </div>
   );
 };

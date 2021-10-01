@@ -19,9 +19,58 @@
   src: url("../assets/fonts/Roboto-Bold.ttf") format("ttf");
 }
 
-// @font-face {
-//   font-family: "Roboto Mono";
-//   font-style: normal;
-//   font-weight: 400;
-//   src: url("../../assets/fonts/RobotoMono-Regular.ttf") format("ttf");
-// }
+@font-face {
+  font-family: "GT America";
+  src: url("assets/fonts/GT-America/GT-America-Standard-Bold.woff2")
+    format("woff2");
+  //url('/static/font/GT-America/GT-America-Standard-Bold.eot') format('embedded-opentype')
+  //url('/static/font/GT-America/GT-America-Standard-Bold.ttf') format('truetype')
+  //url('/static/font/GT-America/GT-America-Standard-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+//
+@font-face {
+  font-family: "GT America";
+  src: url("assets/fonts/GT-America/GT-America-Standard-Medium.woff2")
+    format("woff2");
+  //url('/static/font/GT-America/GT-America-Standard-Medium.eot') format('embedded-opentype')
+  //url('/static/font/GT-America/GT-America-Standard-Medium.ttf') format('truetype')
+  //url('/static/font/GT-America/GT-America-Standard-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("assets/fonts/GT-America/GT-America-Standard-Regular.woff2")
+    format("woff2");
+  //url('/static/font/GT-America/GT-America-Standard-Regular.eot') format('embedded-opentype')
+  //url('/static/font/GT-America/GT-America-Standard-Regular.ttf') format('truetype')
+  //url('/static/font/GT-America/GT-America-Standard-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quarto Light";
+  font-display: swap;
+  src: url("assets/fonts/Quarto/Quarto-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Quarto Medium";
+  font-display: swap;
+  font-weight: 500;
+  src: url("assets/fonts/Quarto/quarto-medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Quarto Bold";
+  font-display: swap;
+  font-weight: 700;
+  src: url("assets/fonts/Quarto/Quarto-Bold.ttf") format("ttf");
+}

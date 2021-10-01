@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "../../lib/Button/Button";
 import styles from "./Hero.module.scss";
+import cn from "classnames";
+
 export type HeroProps = {
   title: string;
   subtitle: string;
@@ -15,12 +17,19 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
   };
 
   return (
-    <div className={styles.heroContainer}>
-      <div className={styles.heroContent}>
-        <p className={styles.eyebrow}>{eyebrow}</p>
-        <h1 className={styles.title}>{title}</h1>
-        <p className={styles.subtitle}>{subtitle}</p>
-        <div className={styles.buttonWrap}>
+    <div className={cn(styles.container)}>
+      <div className={cn("grid")}>
+        <div className={cn("col-12")}>
+          <h1 className={"fadeInUp"}>{title}</h1>
+        </div>
+        <div
+          className={
+            "col-12 col-start-md-4 col-end-md-9 col-start-lg-4 col-end-lg-9 "
+          }
+        >
+          <p className={"fadeInUp"}>{subtitle}</p>
+        </div>
+        <div className={cn(styles.buttonWrap, "fadeInUp")}>
           <Button label={ctaLabel} onClicked={handleGetInTouch} />
         </div>
       </div>
