@@ -17,6 +17,7 @@
   h1 {
     // text-align: center;
     margin-bottom: 16px;
+    z-index: 1;
     span {
       color: $yellow;
     }
@@ -24,13 +25,22 @@
   h5 {
     // text-align: center;
     margin-bottom: 16px;
+    z-index: 1;
   }
   p {
     // text-align: center;
     margin-bottom: 32px;
+    z-index: 1;
   }
 
   .buttonWrap {
-    // margin: auto;
+    // margin: auto;   z-index: 0;
+    z-index: 1;
+  }
+
+  .canvasContaner {
+    position: absolute;
+    left: 0;
+    z-index: 0;
   }
 }

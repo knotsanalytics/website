@@ -118,7 +118,7 @@ const Cursor: React.FC<Props> = ({}) => {
           top: `${pos.y}px`,
         }}
       />
-      <span
+      {/* <span
         className={cn(styles.dotHighlight, cursorClasses)}
         style={{
           left: `${pos.x}px`,
@@ -138,7 +138,7 @@ const Cursor: React.FC<Props> = ({}) => {
           left: `${pos.x}px`,
           top: `${pos.y}px`,
         }}
-      ></span>
+      ></span> */}
     </>
   );
 };

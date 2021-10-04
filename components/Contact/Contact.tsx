@@ -6,6 +6,7 @@ import { createValidator } from "../../lib/validation/validators";
 import { useFormik } from "formik";
 import Button from "../../lib/Button/Button";
 import axios from "axios";
+import Canvas from "../canvas";
 
 export type ContactProps = {
   eyebrow: string;

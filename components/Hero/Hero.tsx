@@ -3,6 +3,8 @@ import Button from "../../lib/Button/Button";
 import styles from "./Hero.module.scss";
 import cn from "classnames";
 
+import Canvas from "../canvas";
+
 export type HeroProps = {
   title: string;
   subtitle: string;
@@ -18,6 +20,10 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
 
   return (
     <div className={cn(styles.container)} id={"hero"}>
+      <div className={styles.canvasContaner}>
+        <Canvas />
+      </div>
+
       <div className={cn("grid")}>
         <h5 className={cn(styles.eyebrow, "fadeInUp")}>{eyebrow}</h5>
         <div className={cn("col-12 col-sm-7 col-md-6")}>
