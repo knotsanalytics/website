@@ -1,14 +1,18 @@
 @import "styles/variables";
 
 .teamContainer {
-  padding: 250px 0 150px 0;
-  margin-bottom: 150px;
+  padding: 150px 0 50px 0;
+  margin-bottom: 100px;
   background-color: $light-bg;
-  background: linear-gradient(-3deg, transparent 85%, white 85%),
+  background: linear-gradient(-3deg, transparent 95%, white 95%),
     linear-gradient(160deg, $light-bg 10%, $light-bg 80%);
 
   position: relative;
-  @media only screen and (min-width: $breakpoint-md) {
+  @media only screen and (min-width: $breakpoint-sm) {
+    background: linear-gradient(-3deg, transparent 85%, white 85%),
+      linear-gradient(160deg, $light-bg 10%, $light-bg 80%);
+    padding: 250px 0 150px 0;
+    margin-bottom: 150px;
   }
 }
 

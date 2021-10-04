@@ -17,23 +17,15 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
   };
 
   return (
-    <div className={cn(styles.container)}>
+    <div className={cn(styles.container)} id={"hero"}>
       <div className={cn("grid")}>
-        <h5 className={styles.eyebrow}>{eyebrow}</h5>
-        <div
-          className={cn(
-            "col-12 col-start-md-3 col-end-md-10 col-start-lg-4 col-end-lg-9"
-          )}
-        >
+        <h5 className={cn(styles.eyebrow, "fadeInUp")}>{eyebrow}</h5>
+        <div className={cn("col-12 col-sm-7 col-md-6")}>
           <h1 className={"fadeInUp"}>
             We help <span>businesses</span> make the most out of their data
           </h1>
         </div>
-        <div
-          className={
-            "col-12 col-start-md-3 col-end-md-10 col-start-lg-3 col-end-lg-10 "
-          }
-        >
+        <div className={"col-12 col-sm-8  col-md-7"}>
           <p className={"fadeInUp"}>{subtitle}</p>
         </div>
         <div className={cn(styles.buttonWrap, "fadeInUp")}>

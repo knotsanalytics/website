@@ -1,0 +1,117 @@
+@import "styles/variables";
+
+.cursor {
+  width: 0;
+  height: 0;
+  background-color: $yellow;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.8s ease, width 0.15s, height 0.15s, all 0.1s;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cursor.cursor_hero_hovered,
+.cursor.cursor_contact_hovered {
+  width: 15px;
+  height: 15px;
+}
+
+.cursor_hidden {
+  opacity: 0;
+}
+
+.cursor_link_hovered {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.cursor_clicked {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.dotHighlight {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transition: all 0.1s;
+
+  background-color: transparent;
+  position: fixed;
+  height: 0;
+  width: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+
+  pointer-events: none;
+  transition: width 0.17s ease-in, height 0.17s ease-in;
+
+  z-index: 9999;
+
+  @media (hover: none) {
+    display: none;
+  }
+}
+.dotHighlight.cursor_contact_hovered {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  mix-blend-mode: difference;
+}
+
+.dotHighlight.cursor_hero_hovered,
+.dotHighlight.cursor_contact_hovered {
+  height: 30vw;
+  width: 35vw;
+  transition: all 0.21s;
+  animation: blobRadius 30s ease infinite;
+  &.second {
+    height: 20vw;
+    width: 20vw;
+    transition: all 0.17s;
+    animation: blobRadius 20s ease infinite;
+  }
+  &.third {
+    height: 10vw;
+    width: 10vw;
+    transition: all 0.15s;
+    animation: blobRadius 12s ease infinite;
+  }
+}
+.cursor.cursor_button_hovered {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.dotHighlight.cursor_button_hovered {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+// BLOB ANIMATIONS
+@keyframes blobRadius {
+  0%,
+  100% {
+    border-radius: 43% 77% 80% 40% / 40% 40% 80% 80%;
+  }
+  20% {
+    border-radius: 47% 73% 61% 59% / 47% 75% 45% 73%;
+  }
+  40% {
+    border-radius: 46% 74% 74% 46% / 74% 58% 62% 46%;
+  }
+  60% {
+    border-radius: 47% 73% 61% 59% / 40% 40% 80% 80%;
+  }
+  80% {
+    border-radius: 50% 70% 52% 68% / 51% 61% 59% 69%;
+  }
+}
+@keyframes blobBackground {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
