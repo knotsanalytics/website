@@ -6,7 +6,10 @@ import Wave from "../wave";
 
 const Canvas: FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const { width, height } = useResponsiveSize();
+  // const { width, height } = useResponsiveSize();
+  const width = useResponsiveSize().width;
+  const height =
+    useResponsiveSize().height > 1000 ? 1000 : useResponsiveSize().height;
 
   const [context, setContext] = useState<
     CanvasRenderingContext2D | undefined

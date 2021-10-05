@@ -4,6 +4,7 @@
   padding: 150px 0 0 0;
   background-color: $dark-blue;
   position: relative;
+  overflow: hidden;
   @media only screen and (min-width: $breakpoint-md) {
     padding: 150px 0 0 0;
   }

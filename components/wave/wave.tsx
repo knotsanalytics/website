@@ -11,6 +11,7 @@ const Wave: FC = () => {
   const waves = {
     frontWave: new WaveObj([0.0122, 0.022, 0.015], "rgba(255,179,0,0.88)"),
     backWave: new WaveObj([0.0122, 0.018, 0.005], "rgba(255,179,0,0.48)"),
+    wave: new WaveObj([0.01, 0.026, 0.009], "rgba(255,179,0,0.48)"),
   };
 
   const render = () => {

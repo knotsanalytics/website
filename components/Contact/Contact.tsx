@@ -84,6 +84,9 @@ const Contact: React.FC<ContactProps> = ({
 
   return (
     <div className={styles.contactContainer} id={"contact"}>
+      {/* <div className={styles.canvasContaner}>
+        <Canvas />
+      </div> */}
       <div className={cn(`grid`, styles.grid)}>
         <div
           className={`col-12 col-start-md-4 col-end-md-9 col-start-lg-4 col-end-lg-9 `}

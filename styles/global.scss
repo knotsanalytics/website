@@ -99,17 +99,20 @@ h5 {
   font-weight: 400;
 }
 
-p {
+p,
+a {
   font-size: 20px;
   line-height: 1.4;
 }
 
-p.large {
+p.large,
+a.large {
   font-size: 24px;
   line-height: 1.3;
 }
 
-p.small {
+p.small,
+a.small {
   font-size: 16px;
   line-height: 1.4;
 }

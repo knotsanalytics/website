@@ -17,10 +17,19 @@ export default function Layout({ navItems, children }: Props) {
       myRef.current.children[idx + 1].scrollIntoView();
     }
   };
+  const onHomeClick = () => {
+    if (myRef && myRef.current) {
+      myRef.current.children[0].scrollIntoView();
+    }
+  };
   return (
     <div className={styles.root}>
       <nav>
-        <Navigation handleElClick={onNavElClicked} navItems={navItems} />
+        <Navigation
+          handleElClick={onNavElClicked}
+          handleHomeClick={onHomeClick}
+          navItems={navItems}
+        />
       </nav>
       <main ref={myRef}>{children}</main>
     </div>

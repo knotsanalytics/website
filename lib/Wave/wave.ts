@@ -14,7 +14,7 @@ class Wave {
     frequency: number
   ): void => {
     context.beginPath();
-    context.moveTo(-10, height);
+    context.moveTo(-100, height);
     if (this.waveLength.length < 3) {
       return;
     }
@@ -24,11 +24,11 @@ class Wave {
       let wave2 = Math.sin(i * this.waveLength[1] - frequency);
       let wave3 = Math.sin(i * this.waveLength[2] - frequency);
 
-      context.lineTo(i * 5.5, height - 400 + wave1 * wave2 * wave3 * 100);
+      context.lineTo(i * 5.5, height - 600 + wave1 * wave2 * wave3 * 100);
     }
     context.lineTo(width, height);
     context.fillStyle = "transparent";
-
+    context.fill();
     context.lineWidth = 5;
     context.stroke();
     context.strokeStyle = "white";
