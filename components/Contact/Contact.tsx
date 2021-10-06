@@ -177,7 +177,12 @@ const Contact: React.FC<ContactProps> = ({
         </div>
       </div>
       <div className={styles.footer}>
-        <a className={styles.footerItem} href={linkedin} target="_blank">
+        <a
+          className={styles.footerItem}
+          href={linkedin}
+          rel="noopener"
+          target="_blank"
+        >
           <Icon icon="linkedin" className={styles.footerIcon} />
           <p className="small">{linkedin}</p>
         </a>

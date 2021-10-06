@@ -20,9 +20,12 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
 
   return (
     <div className={cn(styles.container)} id={"hero"}>
-      <Three />
+      <div className={styles.canvasContaner}>
+        <Three />
+      </div>
+
       <div className={cn("grid")}>
-        <h5 className={cn(styles.eyebrow, "fadeInUp")}>{eyebrow}</h5>
+        <h5 className={cn(styles.eyebrow, "")}>{eyebrow}</h5>
         <div
           className={cn(
             "col-12 col-start-sm-1 col-end-sm-6 col-start-md-1 col-end-md-6 col-start-lg-1 col-end-lg-6"
@@ -30,7 +33,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
         >
           <h1>
             <ReactMarkdown
-              className={cn(`fadeInUp`, styles.title)}
+              className={cn(``, styles.title)}
               components={{ p: "span" }}
             >
               {title}
@@ -42,9 +45,9 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
             "col-12 col-start-sm-1 col-end-sm-7 col-start-md-1 col-end-md-7 col-start-lg-1 col-end-lg-7"
           }
         >
-          <p className={"fadeInUp"}>{subtitle}</p>
+          <p className={""}>{subtitle}</p>
         </div>
-        <div className={cn(styles.buttonWrap, "fadeInUp")}>
+        <div className={cn(styles.buttonWrap, "")}>
           <Button label={ctaLabel} onClicked={handleGetInTouch} />
         </div>
       </div>

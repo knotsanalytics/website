@@ -41,9 +41,12 @@
     .closeIcon {
       position: absolute;
       right: 30px;
-      top: 30px;
+      top: 60px;
       z-index: 12;
       cursor: pointer;
+      @media only screen and (min-width: $breakpoint-md) {
+        top: 30px;
+      }
     }
   }
 }

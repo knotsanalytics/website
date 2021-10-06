@@ -7,11 +7,11 @@ import { WireframeGeometry2 } from "three/examples/jsm/lines/WireframeGeometry2.
 import { LineMaterial } from "three/examples/jsm/lines/LineMaterial.js";
 import { Wireframe } from "three/examples/jsm/lines/Wireframe.js";
 
-import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
-import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
-import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
-import { CopyShader } from "three/examples/jsm/shaders/CopyShader.js";
-import { FXAAShader } from "three/examples/jsm/shaders/FXAAShader.js";
+// import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
+// import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
+// import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
+// import { CopyShader } from "three/examples/jsm/shaders/CopyShader.js";
+// import { FXAAShader } from "three/examples/jsm/shaders/FXAAShader.js";
 
 export type TeamProps = {};
 
@@ -20,16 +20,10 @@ const Three: React.FC<TeamProps> = () => {
   const [height, setHeight] = useState<number>(0);
   const [width, setWidth] = useState<number>(0);
   const [rendered, setRendered] = useState<boolean>(false);
-  const [prevScrollPos, setrevPosScroll] = useState(0);
-  const [y, setY] = useState<any>();
   let renderer: any;
   let camera: any;
-  let composer1: any;
-  let composer2: any;
-
-  const NUMPARTICLES = 8000;
-  let pointCloud;
-  let targetPos;
+  //   let composer1: any;
+  //   let composer2: any;
 
   useEffect(() => {
     if (container && container.current) {
@@ -129,23 +123,23 @@ const Three: React.FC<TeamProps> = () => {
 
       // Particles Renderers
 
-      const renderPass = new RenderPass(scene, camera);
-      const fxaaPass = new ShaderPass(FXAAShader);
-      const copyPass = new ShaderPass(CopyShader);
+      //   const renderPass = new RenderPass(scene, camera);
+      //   const fxaaPass = new ShaderPass(FXAAShader);
+      //   const copyPass = new ShaderPass(CopyShader);
 
-      composer1 = new EffectComposer(renderer);
-      composer1.addPass(renderPass);
-      composer1.addPass(copyPass);
+      //   composer1 = new EffectComposer(renderer);
+      //   composer1.addPass(renderPass);
+      //   composer1.addPass(copyPass);
       const pixelRatio = renderer.getPixelRatio();
 
-      fxaaPass.material.uniforms["resolution"].value.x =
-        1 / (width * pixelRatio);
-      fxaaPass.material.uniforms["resolution"].value.y =
-        1 / (height * pixelRatio);
+      //   fxaaPass.material.uniforms["resolution"].value.x =
+      //     1 / (width * pixelRatio);
+      //   fxaaPass.material.uniforms["resolution"].value.y =
+      //     1 / (height * pixelRatio);
 
-      composer2 = new EffectComposer(renderer);
-      composer2.addPass(renderPass);
-      composer2.addPass(fxaaPass);
+      //   composer2 = new EffectComposer(renderer);
+      //   composer2.addPass(renderPass);
+      //   composer2.addPass(fxaaPass);
 
       const renderScene = () => {
         if (renderer) renderer.render(scene, camera);
@@ -162,19 +156,19 @@ const Three: React.FC<TeamProps> = () => {
         mesh.rotateOnAxis(new THREE.Vector3(0, 1, 0), 0.001);
         // mesh.rotation.y += clock.getDelta() * 0.05;
 
-        const halfWidth = width / 2;
+        // const halfWidth = width / 2;
 
         group.rotation.y += clock.getDelta() * 0.05;
 
-        renderer.setScissorTest(true);
+        // renderer.setScissorTest(true);
 
-        renderer.setScissor(0, 0, halfWidth - 1, height);
-        composer1.render();
+        // renderer.setScissor(0, 0, halfWidth - 1, height);
+        // composer1.render();
 
-        renderer.setScissor(halfWidth, 0, halfWidth, height);
-        composer2.render();
+        // renderer.setScissor(halfWidth, 0, halfWidth, height);
+        // composer2.render();
 
-        renderer.setScissorTest(false);
+        // renderer.setScissorTest(false);
 
         renderScene();
         frameId = window.requestAnimationFrame(animate);
@@ -206,8 +200,8 @@ const Three: React.FC<TeamProps> = () => {
       //   camera.aspect = w / h;
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
-      composer1.setSize(w, h);
-      composer2.setSize(w, h);
+      //   composer1.setSize(w, h);
+      //   composer2.setSize(w, h);
     }
   };
 

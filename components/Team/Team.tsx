@@ -102,7 +102,7 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
                     <div className={styles.imageContainer}>
                       <img src={member.picture} alt={member.fullName} />
                     </div>
-                    <a href={member.linkedin} target="_blank">
+                    <a href={member.linkedin} rel="noopener" target="_blank">
                       <Icon
                         icon="linkedin"
                         color="black"
