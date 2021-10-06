@@ -1,11 +1,8 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Three.module.scss";
 import cn from "classnames";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
-import useDocumentScrollThrottled from "../../lib/scroll";
+
 import { WireframeGeometry2 } from "three/examples/jsm/lines/WireframeGeometry2.js";
 import { LineMaterial } from "three/examples/jsm/lines/LineMaterial.js";
 import { Wireframe } from "three/examples/jsm/lines/Wireframe.js";
@@ -16,8 +13,6 @@ import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
 import { CopyShader } from "three/examples/jsm/shaders/CopyShader.js";
 import { FXAAShader } from "three/examples/jsm/shaders/FXAAShader.js";
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 export type TeamProps = {};
 
 const Three: React.FC<TeamProps> = () => {
@@ -67,56 +62,56 @@ const Three: React.FC<TeamProps> = () => {
       //   const controls = new OrbitControls(camera, renderer.domElement);
 
       // PARTICLES LIGHTS
-      //   const hemiLight = new THREE.HemisphereLight(0xffffff, 0xefefef);
-      //   hemiLight.position.set(0, 1000, 0);
-      //   scene.add(hemiLight);
+      const hemiLight = new THREE.HemisphereLight(0xffffff, 0xf8fbff);
+      hemiLight.position.set(0, 1000, 0);
+      scene.add(hemiLight);
 
-      //   const dirLight = new THREE.DirectionalLight(0xffffff, 0.1);
-      //   dirLight.position.set(-3000, 1000, -1000);
-      //   scene.add(dirLight);
+      const dirLight = new THREE.DirectionalLight(0xffffff, 0.1);
+      dirLight.position.set(-3000, 1000, -1000);
+      scene.add(dirLight);
 
       let frameId = 0;
 
       // thick mesh
-      var geo = new THREE.SphereBufferGeometry(300, 9, 9);
+      var geo = new THREE.SphereBufferGeometry(450, 9, 9);
       var geometry = new WireframeGeometry2(geo);
       const matLine = new LineMaterial({
         color: 0xffffff,
-        linewidth: 3, // in pixels
+        linewidth: 2,
       });
       matLine.resolution.set(window.innerWidth, window.innerHeight);
       const mesh = new Wireframe(geometry, matLine);
-      mesh.position.x = 400;
-      mesh.rotateOnAxis(new THREE.Vector3(1, 0, 0), 0.01);
+      mesh.position.x = 500;
+      mesh.rotation.x = 10;
+      mesh.rotation.z = -10;
       scene.add(mesh);
       const clock = new THREE.Clock();
+
       // Particles
-      //
-      //   const group = new THREE.Group();
+      const group = new THREE.Group();
+      const pGeometry = new THREE.TetrahedronGeometry(5);
+      const pMaterial = new THREE.MeshStandardMaterial({
+        color: 0xffffff,
+        flatShading: false,
+      });
 
-      //   const pGeometry = new THREE.TetrahedronGeometry(5);
-      //   const pMaterial = new THREE.MeshStandardMaterial({
-      //     color: 0xffffff,
-      //     flatShading: false,
-      //   });
+      for (let i = 0; i < 100; i++) {
+        const pMesh = new THREE.Mesh(pGeometry, pMaterial);
 
-      //   for (let i = 0; i < 300; i++) {
-      //     const pMesh = new THREE.Mesh(pGeometry, pMaterial);
+        pMesh.position.x = Math.random() * 1500 - 750 + 0;
+        pMesh.position.y = Math.random() * 1500 - 750;
+        pMesh.position.z = Math.random() * 1500 - 750;
 
-      //     pMesh.position.x = Math.random() * 1500 - 750 + 0;
-      //     pMesh.position.y = Math.random() * 1500 - 750;
-      //     pMesh.position.z = Math.random() * 1500 - 750;
+        pMesh.scale.setScalar(Math.random() * 2 + 1);
 
-      //     pMesh.scale.setScalar(Math.random() * 2 + 1);
+        pMesh.rotation.x = Math.random() * Math.PI;
+        pMesh.rotation.y = Math.random() * Math.PI;
+        pMesh.rotation.z = Math.random() * Math.PI;
 
-      //     pMesh.rotation.x = Math.random() * Math.PI;
-      //     pMesh.rotation.y = Math.random() * Math.PI;
-      //     pMesh.rotation.z = Math.random() * Math.PI;
+        group.add(pMesh);
+      }
 
-      //     group.add(pMesh);
-      //   }
-
-      //   scene.add(group);
+      scene.add(group);
 
       //add Camera
       //   camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
@@ -134,23 +129,23 @@ const Three: React.FC<TeamProps> = () => {
 
       // Particles Renderers
 
-      //   const renderPass = new RenderPass(scene, camera);
-      //   const fxaaPass = new ShaderPass(FXAAShader);
-      //   const copyPass = new ShaderPass(CopyShader);
+      const renderPass = new RenderPass(scene, camera);
+      const fxaaPass = new ShaderPass(FXAAShader);
+      const copyPass = new ShaderPass(CopyShader);
 
-      //   composer1 = new EffectComposer(renderer);
-      //   composer1.addPass(renderPass);
-      //   composer1.addPass(copyPass);
-      //   const pixelRatio = renderer.getPixelRatio();
+      composer1 = new EffectComposer(renderer);
+      composer1.addPass(renderPass);
+      composer1.addPass(copyPass);
+      const pixelRatio = renderer.getPixelRatio();
 
-      //   fxaaPass.material.uniforms["resolution"].value.x =
-      //     1 / (width * pixelRatio);
-      //   fxaaPass.material.uniforms["resolution"].value.y =
-      //     1 / (height * pixelRatio);
+      fxaaPass.material.uniforms["resolution"].value.x =
+        1 / (width * pixelRatio);
+      fxaaPass.material.uniforms["resolution"].value.y =
+        1 / (height * pixelRatio);
 
-      //   composer2 = new EffectComposer(renderer);
-      //   composer2.addPass(renderPass);
-      //   composer2.addPass(fxaaPass);
+      composer2 = new EffectComposer(renderer);
+      composer2.addPass(renderPass);
+      composer2.addPass(fxaaPass);
 
       const renderScene = () => {
         if (renderer) renderer.render(scene, camera);
@@ -164,22 +159,22 @@ const Three: React.FC<TeamProps> = () => {
 
       const animate = () => {
         //Animate Models Here
-        // mesh.rotateOnAxis(new THREE.Vector3(0, 1, 0), 0.001);
-        mesh.rotation.y += clock.getDelta() * 0.05;
+        mesh.rotateOnAxis(new THREE.Vector3(0, 1, 0), 0.001);
+        // mesh.rotation.y += clock.getDelta() * 0.05;
 
-        // const halfWidth = width / 2;
+        const halfWidth = width / 2;
 
-        // group.rotation.y += clock.getDelta() * 0.1;
+        group.rotation.y += clock.getDelta() * 0.05;
 
-        // renderer.setScissorTest(true);
+        renderer.setScissorTest(true);
 
-        // renderer.setScissor(0, 0, halfWidth - 1, height);
-        // composer1.render();
+        renderer.setScissor(0, 0, halfWidth - 1, height);
+        composer1.render();
 
-        // renderer.setScissor(halfWidth, 0, halfWidth, height);
-        // composer2.render();
+        renderer.setScissor(halfWidth, 0, halfWidth, height);
+        composer2.render();
 
-        // renderer.setScissorTest(false);
+        renderer.setScissorTest(false);
 
         renderScene();
         frameId = window.requestAnimationFrame(animate);

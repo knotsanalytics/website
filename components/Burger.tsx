@@ -14,9 +14,13 @@ export default function Burger({ active, onClick }: Props) {
             width: 25px;
             height: 25px;
             cursor: pointer;
-            position: relative;
             z-index: 2;
             background-color: transparent;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+          }
+          .container.active {
           }
           .meat {
             position: absolute;

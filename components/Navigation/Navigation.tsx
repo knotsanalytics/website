@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Navigation.module.scss";
 import { useRouter } from "next/router";
 import cn from "classnames";
 import Burger from "../Burger";
-
+import { gsap } from "gsap";
 export type NavigationProps = {
   handleElClick: (idx: number) => void;
   handleHomeClick: () => void;
@@ -26,14 +26,46 @@ const Navigation: React.FC<NavigationProps> = ({
     handleElClick(idx);
   };
 
+  useEffect(() => {
+    if (active) {
+      gsap.fromTo(
+        ".navEl",
+        {
+          y: 40,
+          opacity: 0,
+          duration: 1,
+          ease: "Power2.easeOut",
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.3,
+          ease: "Power2.easeOut",
+          autoAlpha: 1,
+          display: "block",
+          delay: 0.2,
+          stagger: 0.02,
+        }
+      );
+    } else {
+      gsap.to(".navEl", {
+        autoAlpha: 0,
+        display: "none",
+        duration: 0,
+      });
+    }
+  }, [active]);
+
   return (
-    <div className={`${styles.Navigation}`}>
+    <nav className={cn(styles.nav, { [styles.active]: active })}>
       <p className={cn(styles.logo)} onClick={() => handleHomeClick()}>
         KNOTS
       </p>
       {navItems.map((item, idx) => (
         <a
-          className={cn(styles.navEl, "small", { [styles.active]: active })}
+          className={cn(styles.navEl, "small", "navEl", {
+            [styles.active]: active,
+          })}
           key={idx}
           onClick={() => handleElClicked(idx)}
         >
@@ -44,7 +76,11 @@ const Navigation: React.FC<NavigationProps> = ({
         className={cn(styles.lang, { [styles.active]: active })}
         onClick={() => setDD(!DD)}
       >
-        <p className={`${styles.langLink} small ${DD ? styles.active : ""}`}>
+        <p
+          className={`${styles.langLink} small navEl ${
+            DD ? styles.active : ""
+          }`}
+        >
           {String(locale)}
           <img src="/images/chevron-down.svg" alt="language" />
         </p>
@@ -54,14 +90,16 @@ const Navigation: React.FC<NavigationProps> = ({
               .filter((item) => item !== locale)
               .map((item) => (
                 <Link href="/" locale={String(item)} key={item}>
-                  <a className={"small"}>{String(item)}</a>
+                  <a className={"small"} onClick={() => setActive(false)}>
+                    {String(item)}
+                  </a>
                 </Link>
               ))}
         </div>
       </div>
-      <Burger active={active} onClick={() => setActive(!active)} />{" "}
+      <Burger active={active} onClick={() => setActive(!active)} />
       <div className={cn(styles.mobileBg, { [styles.active]: active })}></div>
-    </div>
+    </nav>
   );
 };
 export default Navigation;

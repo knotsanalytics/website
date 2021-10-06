@@ -5,6 +5,7 @@
   background-color: $dark-blue;
   position: relative;
   overflow: hidden;
+
   @media only screen and (min-width: $breakpoint-md) {
     padding: 150px 0 0 0;
   }
@@ -126,7 +127,39 @@
 
 .footer {
   background-color: $darker-blue;
-  padding: 100px 0 30px 0;
+  padding: 50px 50px 30px 50px;
+  display: flex;
+
+  flex-direction: column;
+  @media only screen and (min-width: $breakpoint-md) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footerItem {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0.7;
+    margin-bottom: 22px;
+    @media only screen and (min-width: $breakpoint-md) {
+      margin-bottom: 0;
+    }
+    .footerIcon {
+      height: 20px;
+      width: 20px;
+      color: $light-blue;
+    }
+    p {
+      font-family: $mono_font_family;
+      color: $white;
+      margin-left: 10px;
+      font-size: 12px;
+      line-height: 1;
+      color: $light-blue;
+    }
+  }
 }
 
 .itemsCol {

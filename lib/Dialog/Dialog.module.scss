@@ -1,0 +1,49 @@
+@import "styles/variables";
+
+.dialogContainer {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  &.active {
+    display: block;
+  }
+
+  .backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+  }
+  .dialog {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background-color: $white;
+    z-index: 11;
+    border-radius: 10px;
+    min-height: 60px;
+    min-height: 200px;
+
+    max-height: 100vh;
+    max-width: 100vw;
+
+    .closeIcon {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      z-index: 12;
+      cursor: pointer;
+    }
+  }
+}

@@ -6,8 +6,7 @@ import { createValidator } from "../../lib/validation/validators";
 import { useFormik } from "formik";
 import Button from "../../lib/Button/Button";
 import axios from "axios";
-import Canvas from "../canvas";
-
+import Icon from "../../lib/Icon/Icon";
 export type ContactProps = {
   eyebrow: string;
   title: string;
@@ -84,9 +83,6 @@ const Contact: React.FC<ContactProps> = ({
 
   return (
     <div className={styles.contactContainer} id={"contact"}>
-      {/* <div className={styles.canvasContaner}>
-        <Canvas />
-      </div> */}
       <div className={cn(`grid`, styles.grid)}>
         <div
           className={`col-12 col-start-md-4 col-end-md-9 col-start-lg-4 col-end-lg-9 `}
@@ -173,26 +169,20 @@ const Contact: React.FC<ContactProps> = ({
           </form>
         </div>
       </div>
-      <div className={styles.footer}></div>
-      {/* <div
-        className={`col-12 col-md-4 col-start-lg-10 col-end-lg-11 ${styles.itemsCol}`}
-      >
-        <a
-          target="_blank"
-          href={linkedin}
-          className={cn(styles.linkedin, "fadeInUp")}
-        >
-          linkedin
+      <div className={styles.footer}>
+        <a className={styles.footerItem} href={linkedin} target="_blank">
+          <Icon icon="linkedin" className={styles.footerIcon} />
+          <p className="small">{linkedin}</p>
         </a>
-        <p className={cn(styles.mail, "fadeInUp")}>{email}</p>
-        <p className={cn(styles.phone, "fadeInUp")}>{phone}</p>
-
-        <p className={cn(styles.address, "fadeInUp")}>{address}</p>
+        <div className={styles.footerItem}>
+          <Icon icon="phone" className={styles.footerIcon} />
+          <p className="small">{phone}</p>
+        </div>
+        <div className={styles.footerItem}>
+          <Icon icon="location" className={styles.footerIcon} />
+          <p className="small">{address}</p>
+        </div>
       </div>
-      <div className={styles.divider}></div>
-      <p className={styles.copyrights}>
-        {"Copyright @2020 All rights reserved"}
-      </p> */}
     </div>
   );
 };

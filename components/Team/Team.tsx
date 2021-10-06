@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Team.module.scss";
 
 import cn from "classnames";
+import Icon from "../../lib/Icon/Icon";
+import Dialog from "../../lib/Dialog/Dialog";
 
 export type TeamProps = {
   title: string;
@@ -15,6 +17,23 @@ export type TeamProps = {
 };
 
 const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
+  const [dialogs, setDialogs] = useState([false, false]);
+
+  const handleCloseDialog = (idx: number) => {
+    const newArray = dialogs;
+    newArray[idx] = false;
+    setDialogs((oldArray) => [...newArray]);
+  };
+
+  const handleOpenDialog = (idx: number) => {
+    const newArray = dialogs;
+    newArray[idx] = true;
+    console.log(newArray);
+    setDialogs((oldArray) =>
+      oldArray.map((item, ix) => (ix === idx ? true : false))
+    );
+  };
+
   return (
     <div className={styles.teamContainer}>
       <div className={cn(`grid`, styles.grid)}>
@@ -43,16 +62,47 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
             )}
           >
             <div className={styles.meta}>
-              <div className={styles.imgContainer}>
+              <div
+                className={styles.imgContainer}
+                onClick={() => handleOpenDialog(idx)}
+              >
                 <div className={cn(styles.imgWrap, "fadeInUp")}>
                   <img src={member.picture} alt={member.fullName} />
                 </div>
-                <div className={styles.arrowContainer}></div>
+                <div className={cn(styles.arrowContainer, "fadeInUp")}>
+                  <Icon icon="arrow" color="white" className={styles.arrow} />
+                </div>
               </div>
-
+              <div className={cn(styles.dividerTop, "fadeInUp")}></div>
               <h3 className={"fadeInUp"}>{member.fullName}</h3>
               <h5 className={"small fadeInUp"}>{member.role}</h5>
             </div>
+
+            <Dialog
+              active={dialogs[idx]}
+              onClose={() => handleCloseDialog(idx)}
+            >
+              <div className={cn(styles.dialogContent)}>
+                <h2>{member.fullName}</h2>
+                <h3>{member.role}</h3>
+                <div className={styles.content}>
+                  <div className={styles.leftCol}>
+                    <div className={styles.imageContainer}>
+                      <img src={member.picture} alt={member.fullName} />
+                    </div>
+                    <a href="" target="_blank">
+                      <Icon
+                        icon="linkedin"
+                        color="black"
+                        className={styles.linkedin}
+                      />
+                    </a>
+                  </div>
+
+                  <p className={cn(styles.bio, "small")}>{member.bio} </p>
+                </div>
+              </div>
+            </Dialog>
           </div>
         ))}
       </div>

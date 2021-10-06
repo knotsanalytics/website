@@ -43,6 +43,10 @@ const Mission: React.FC<MissionProps> = ({ missionSections }) => {
               styles.sectionCol
             )}
           >
+            <div
+              className={cn(styles.dividerTop, "fadeInUp")}
+              style={{ backgroundColor: palette[idx] }}
+            ></div>
             <p
               className={cn(styles.index, "fadeInUp")}
               style={{ color: palette[idx] }}
