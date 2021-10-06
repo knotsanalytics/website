@@ -6,32 +6,33 @@ import { TextPlugin } from "gsap/dist/TextPlugin";
 import cn from "classnames";
 
 export type MissionProps = {
+  eyebrow: string;
+  description: string;
   missionSections: Array<{
     title: string;
-    eyebrow: string;
     body: any;
   }>;
 };
 
 const palette = ["#f5c359", "#c8d9e2", "#2c2e5c"];
 
-const Mission: React.FC<MissionProps> = ({ missionSections }) => {
+const Mission: React.FC<MissionProps> = ({
+  eyebrow,
+  description,
+  missionSections,
+}) => {
   useEffect(() => {}, []);
 
   return (
     <div className={styles.missionContainer}>
       <div className={"grid"}>
         <div className={`col-12 col-sm-2 col-md-3 col-lg-5`}>
-          <h4 className={"fadeInUp"}>{"What we do"}</h4>
+          <h4 className={"fadeInUp"}>{eyebrow}</h4>
         </div>
         <div
           className={`col-12 col-sm-10 col-md-9 col-lg-7 ${styles.bodyLargeCol}`}
         >
-          <p className={cn("fadeInUp large")}>
-            {
-              "Knots Analytics is a data science company providing solutions to address the needs of your business and to help you to reach your goals."
-            }
-          </p>
+          <p className={cn("fadeInUp large")}>{description}</p>
         </div>
         {missionSections.map((section, idx) => (
           <div

@@ -78,7 +78,12 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
                 </div>
               </div>
               <div className={cn(styles.dividerTop, "fadeInUp")}></div>
-              <h3 className={"fadeInUp"}>{member.fullName}</h3>
+              <h3 className={"fadeInUp"}>
+                <ReactMarkdown components={{ p: "span" }}>
+                  {member.fullName}
+                </ReactMarkdown>
+              </h3>
+
               <h5 className={"small fadeInUp"}>{member.role}</h5>
             </div>
 
@@ -87,7 +92,11 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
               onClose={() => handleCloseDialog(idx)}
             >
               <div className={cn(styles.dialogContent)}>
-                <h2>{member.fullName}</h2>
+                <h2>
+                  <ReactMarkdown components={{ p: "span" }}>
+                    {member.fullName}
+                  </ReactMarkdown>
+                </h2>
                 <h3>{member.role}</h3>
                 <div className={styles.content}>
                   <div className={styles.leftCol}>
