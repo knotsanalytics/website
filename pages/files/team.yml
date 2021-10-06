@@ -1,6 +1,6 @@
 en:
   title: Meet The *Founders*
-  subtitle: Something About the team
+  subtitle: Something about the team
   members:
     - bio: I am a computer and data scientist with a Ph.D. in Theoretical Physics.
         During my years in research, I focused on Quantum Gravity and on a
@@ -11,11 +11,11 @@ en:
         analytical and numerical background and express my passion for complex
         problems with simple and elegant solutions.
       fullName: Giorgio *Sarno*
-      role: President
+      role: Président
       picture: /images/2.jpeg
-      linkedin: google.com
+      linkedin: https://www.linkedin.com/in/giorgio-sarno/
     - fullName: Simone *Fuscone*
-      role: CTO
+      role: Directeur Général
       picture: /images/whatsapp-image-2021-10-06-at-19.37.04.jpeg
       bio: I am a machine learning engineer that pursued a Ph.D. in computational
         linguistics. I started data analysis during my master in physics where I
@@ -25,10 +25,10 @@ en:
         DOC2AMU project (a Marie Curie fellowship) where I was able to learn NLP
         techniques for applied linguistics. Every day I use my skills,
         experience, and enthusiasm as co-founder at KNOTS.
-      linkedin: google.com
+      linkedin: https://www.linkedin.com/in/simone-fuscone-ba403071/
 fr:
   title: Meet The *Founders*
-  subtitle: Something About the team
+  subtitle: Something about the team
   members:
     - fullName: Giorgio Sarno
       role: President
@@ -41,9 +41,10 @@ fr:
         analytical and numerical background and express my passion for complex
         problems with simple and elegant solutions.
       picture: /images/2.jpeg
+      linkedin: https://www.linkedin.com/in/giorgio-sarno/
     - picture: /images/whatsapp-image-2021-10-06-at-19.37.04.jpeg
       fullName: Simone Fuscone
-      role: CTO
+      role: Président
       bio: I am a machine learning engineer that pursued a Ph.D. in computational
         linguistics. I started data analysis during my master in physics where I
         modeled spatial and neurological data. After I had the opportunity to
@@ -52,3 +53,4 @@ fr:
         DOC2AMU project (a Marie Curie fellowship) where I was able to learn NLP
         techniques for applied linguistics. Every day I use my skills,
         experience, and enthusiasm as co-founder at KNOTS.
+      linkedin: https://www.linkedin.com/in/simone-fuscone-ba403071/
