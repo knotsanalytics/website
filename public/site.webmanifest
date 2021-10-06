@@ -1,0 +1,14 @@
+{
+  "short_name": "KNOTS",
+  "name": "KNOTS",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fefefe",
+  "theme_color": "#fefefe"
+}

@@ -71,7 +71,7 @@ collections:
             i18n: true
           - label: Title
             name: title
-            widget: string
+            widget: markdown
             i18n: true
           - label: Subtitle
             name: subtitle
