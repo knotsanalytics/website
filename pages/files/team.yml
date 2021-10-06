@@ -1,6 +1,6 @@
 en:
   title: Meet The *Founders*
-  subtitle: Something About the team
+  subtitle: Something about the team
   members:
     - bio: I am a computer and data scientist with a Ph.D. in Theoretical Physics.
         During my years in research, I focused on Quantum Gravity and on a
@@ -28,7 +28,7 @@ en:
       linkedin: https://www.linkedin.com/in/simone-fuscone-ba403071/
 fr:
   title: Meet The *Founders*
-  subtitle: Something About the team
+  subtitle: Something about the team
   members:
     - fullName: Giorgio Sarno
       role: President
