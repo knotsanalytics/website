@@ -10,7 +10,6 @@ import Layout from "../components/Layout/Layout";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { StoreProvider } from "../lib/StoreProvider/StoreProvider";
-import Cursor from "../lib/Cursor/Cursor";
 
 type Props = {
   hero: HeroProps;
