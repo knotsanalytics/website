@@ -131,7 +131,7 @@ collections:
         fields:
           - label: Title
             name: title
-            widget: string
+            widget: markdown
             i18n: true
           - label: Subtitle
             name: subtitle
@@ -151,8 +151,8 @@ collections:
                   {
                     label: "Full Name",
                     name: "fullName",
-                    widget: "string",
-                    i18n: true,
+                    widget: "markdown",
+                    i18n: duplicate,
                   },
                   { label: "Role", name: "role", widget: "string", i18n: true },
                   { label: "Bio", name: "bio", widget: "string", i18n: true },
@@ -170,22 +170,18 @@ collections:
         description: "Contact"
         i18n: true
         fields:
-          - label: Eyebrow
-            name: eyebrow
-            widget: string
-            i18n: true
           - label: Title
             name: title
-            widget: string
+            widget: markdown
             i18n: true
-          - label: Email
-            name: email
-            widget: string
-            i18n: duplicate
+          - label: Subtitle
+            name: subtitle
+            widget: markdown
+            i18n: true
           - label: Address
             name: address
             widget: string
-            i18n: true
+            i18n: duplicate
           - label: Phone
             name: phone
             widget: string
@@ -193,7 +189,7 @@ collections:
           - label: Linkedin
             name: linkedin
             widget: string
-            i18n: true
+            i18n: duplicate
           - label: "Contact Form"
             name: "contactForm"
             collapsed: true

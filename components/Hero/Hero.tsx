@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../../lib/Button/Button";
 import styles from "./Hero.module.scss";
 import cn from "classnames";
-
+import ReactMarkdown from "react-markdown";
 import Three from "../Three/Three";
 
 export type HeroProps = {
@@ -18,6 +18,8 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
     document.getElementById("contact")?.scrollIntoView();
   };
 
+  console.log(title);
+
   return (
     <div className={cn(styles.container)} id={"hero"}>
       <Three />
@@ -28,8 +30,13 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
             "col-12 col-start-sm-1 col-end-sm-6 col-start-md-1 col-end-md-6 col-start-lg-1 col-end-lg-6"
           )}
         >
-          <h1 className={"fadeInUp"}>
-            We help <span>businesses</span> make the most out of their data
+          <h1>
+            <ReactMarkdown
+              className={cn(`fadeInUp`, styles.title)}
+              components={{ p: "span" }}
+            >
+              {title}
+            </ReactMarkdown>
           </h1>
         </div>
         <div

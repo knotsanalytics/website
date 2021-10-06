@@ -4,6 +4,7 @@ import styles from "./Team.module.scss";
 import cn from "classnames";
 import Icon from "../../lib/Icon/Icon";
 import Dialog from "../../lib/Dialog/Dialog";
+import ReactMarkdown from "react-markdown";
 
 export type TeamProps = {
   title: string;
@@ -38,8 +39,13 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
     <div className={styles.teamContainer}>
       <div className={cn(`grid`, styles.grid)}>
         <div className={`col-12 col-sm-8 col-md-6 col-lg-6`}>
-          <h2 className={cn(styles.title, "fadeInUp")}>
-            Meet the <span>Founders</span>
+          <h2>
+            <ReactMarkdown
+              className={cn(`fadeInUp`, styles.title)}
+              components={{ p: "span" }}
+            >
+              {title}
+            </ReactMarkdown>
           </h2>
           <p className={cn(styles.subtitle, "fadeInUp")}>
             KNOTS is a data science company providing solutions to address the

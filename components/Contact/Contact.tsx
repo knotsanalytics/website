@@ -7,9 +7,10 @@ import { useFormik } from "formik";
 import Button from "../../lib/Button/Button";
 import axios from "axios";
 import Icon from "../../lib/Icon/Icon";
+import ReactMarkdown from "react-markdown";
 export type ContactProps = {
-  eyebrow: string;
   title: string;
+  subtitle: string;
   email: string;
   address: string;
   linkedin: string;
@@ -37,9 +38,8 @@ const getVisibleError = (formik: any, fieldName: string) =>
   formik.touched[fieldName] ? formik.errors[fieldName] : "";
 
 const Contact: React.FC<ContactProps> = ({
-  eyebrow,
   title,
-  email,
+  subtitle,
   address,
   linkedin,
   phone,
@@ -87,14 +87,18 @@ const Contact: React.FC<ContactProps> = ({
         <div
           className={`col-12 col-start-md-4 col-end-md-9 col-start-lg-4 col-end-lg-9 `}
         >
-          <h2 className={cn(styles.headline, "fadeInUp")}>
-            Get in <span>Touch</span>
+          <h2>
+            <ReactMarkdown
+              className={cn(`fadeInUp`, styles.headline)}
+              components={{ p: "span" }}
+            >
+              {title}
+            </ReactMarkdown>
           </h2>
-          <p className={cn(" fadeInUp", styles.subtitle)}>
-            Have a project for us, or just want to say hi? Feel free to send us
-            an email at <span>knots.analytics@gmail.com</span> or use the form
-            below.
-          </p>
+
+          <ReactMarkdown className={cn(`fadeInUp`, styles.subtitle)}>
+            {subtitle}
+          </ReactMarkdown>
         </div>
 
         <div
