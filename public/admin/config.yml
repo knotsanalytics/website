@@ -97,6 +97,10 @@ collections:
         description: "Our Mission"
         i18n: true
         fields:
+          - label: Eyebrow
+            name: eyebrow
+            widget: string
+            i18n: true
           - {
               label: Mission Sections,
               name: missionSections,
@@ -108,12 +112,6 @@ collections:
               min: 3,
               fields:
                 [
-                  {
-                    label: "Eyebrow",
-                    name: "eyebrow",
-                    widget: "string",
-                    i18n: true,
-                  },
                   {
                     label: "Title",
                     name: "title",
