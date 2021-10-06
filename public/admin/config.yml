@@ -101,6 +101,10 @@ collections:
             name: eyebrow
             widget: string
             i18n: true
+          - label: Description
+            name: description
+            widget: string
+            i18n: true
           - {
               label: Mission Sections,
               name: missionSections,
@@ -154,6 +158,12 @@ collections:
                   },
                   { label: "Role", name: "role", widget: "string", i18n: true },
                   { label: "Bio", name: "bio", widget: "string", i18n: true },
+                  {
+                    label: "Linkedin",
+                    name: "linkedin",
+                    widget: "string",
+                    i18n: duplicate,
+                  },
                   {
                     label: "Picture",
                     name: "picture",

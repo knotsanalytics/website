@@ -14,6 +14,7 @@ export type TeamProps = {
     role: string;
     picture: string;
     bio: string;
+    linkedin: string;
   }>;
 };
 
@@ -47,10 +48,7 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
               {title}
             </ReactMarkdown>
           </h2>
-          <p className={cn(styles.subtitle, "fadeInUp")}>
-            KNOTS is a data science company providing solutions to address the
-            needs of your business and to help you to reach your goals.
-          </p>
+          <p className={cn(styles.subtitle, "fadeInUp")}>{subtitle}</p>
         </div>
         {members.map((member, idx) => (
           <div
@@ -96,7 +94,7 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
                     <div className={styles.imageContainer}>
                       <img src={member.picture} alt={member.fullName} />
                     </div>
-                    <a href="" target="_blank">
+                    <a href={member.linkedin} target="_blank">
                       <Icon
                         icon="linkedin"
                         color="black"
