@@ -11,6 +11,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { StoreProvider } from "../lib/StoreProvider/StoreProvider";
 import Cursor from "../lib/Cursor/Cursor";
+import Three from "../components/Three/Three";
 
 type Props = {
   hero: HeroProps;

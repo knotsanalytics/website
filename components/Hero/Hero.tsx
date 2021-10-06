@@ -4,6 +4,7 @@ import styles from "./Hero.module.scss";
 import cn from "classnames";
 
 import Canvas from "../canvas";
+import Three from "../Three/Three";
 
 export type HeroProps = {
   title: string;
@@ -23,12 +24,12 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
       {/* <div className={styles.canvasContaner}>
         <Canvas />
       </div> */}
-
+      <Three />
       <div className={cn("grid")}>
         <h5 className={cn(styles.eyebrow, "fadeInUp")}>{eyebrow}</h5>
         <div
           className={cn(
-            "col-12 col-start-sm-4 col-end-sm-9 col-start-md-4 col-end-md-9 col-start-lg-4 col-end-lg-9"
+            "col-12 col-start-sm-1 col-end-sm-6 col-start-md-1 col-end-md-6 col-start-lg-1 col-end-lg-6"
           )}
         >
           <h1 className={"fadeInUp"}>
@@ -37,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
         </div>
         <div
           className={
-            "col-12 col-start-sm-4 col-end-sm-9 col-start-md-4 col-end-md-9 col-start-lg-3 col-end-lg-10"
+            "col-12 col-start-sm-1 col-end-sm-7 col-start-md-1 col-end-md-7 col-start-lg-1 col-end-lg-7"
           }
         >
           <p className={"fadeInUp"}>{subtitle}</p>
