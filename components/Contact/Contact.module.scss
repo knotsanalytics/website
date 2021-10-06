@@ -23,8 +23,7 @@
   @media only screen and (min-width: $breakpoint-md) {
     margin-bottom: 90px;
   }
-  span {
-    color: $yellow;
+  em {
     text-decoration: underline;
   }
 }
