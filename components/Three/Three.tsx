@@ -77,7 +77,7 @@ const Three: React.FC<TeamProps> = () => {
       var geometry = new WireframeGeometry2(geo);
       const matLine = new LineMaterial({
         color: 0xffffff,
-        linewidth: 2,
+        linewidth: 3,
       });
       matLine.resolution.set(window.innerWidth, window.innerHeight);
       const mesh = new Wireframe(geometry, matLine);
@@ -89,7 +89,7 @@ const Three: React.FC<TeamProps> = () => {
 
       // Particles
       const group = new THREE.Group();
-      const pGeometry = new THREE.TetrahedronGeometry(5);
+      const pGeometry = new THREE.TetrahedronGeometry(7);
       const pMaterial = new THREE.MeshStandardMaterial({
         color: 0xffffff,
         flatShading: false,

@@ -96,14 +96,12 @@ const Contact: React.FC<ContactProps> = ({
               {title}
             </ReactMarkdown>
           </h2>
-          <p>
-            <ReactMarkdown
-              className={cn(`fadeInUp`, styles.subtitle)}
-              components={{ p: "span" }}
-            >
-              {subtitle}
-            </ReactMarkdown>
-          </p>
+
+          <ReactMarkdown
+            className={cn(`fadeInUp`, `md-white-text`, styles.subtitle)}
+          >
+            {subtitle}
+          </ReactMarkdown>
         </div>
 
         <div

@@ -111,7 +111,11 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
                     </a>
                   </div>
 
-                  <p className={cn(styles.bio, "small")}>{member.bio} </p>
+                  <p className={cn(styles.bio, "small")}>
+                    <ReactMarkdown components={{ p: "span" }}>
+                      {member.bio}
+                    </ReactMarkdown>
+                  </p>
                 </div>
               </div>
             </Dialog>

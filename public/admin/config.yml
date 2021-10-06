@@ -157,7 +157,7 @@ collections:
                     i18n: duplicate,
                   },
                   { label: "Role", name: "role", widget: "string", i18n: true },
-                  { label: "Bio", name: "bio", widget: "string", i18n: true },
+                  { label: "Bio", name: "bio", widget: "markdown", i18n: true },
                   {
                     label: "Linkedin",
                     name: "linkedin",

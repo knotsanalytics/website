@@ -135,7 +135,18 @@
 
 .footer {
   background-color: $darker-blue;
-  padding: 50px 50px 30px 50px;
+  padding: 50px 0 30px 0;
+  padding-left: $grid-margins;
+  padding-right: $grid-margins;
+
+  @media only screen and (min-width: $breakpoint-sm) {
+    padding-left: $grid-margins-sm;
+    padding-right: $grid-margins-sm;
+  }
+  @media only screen and (min-width: $breakpoint-lg) {
+    padding-left: $grid-margins-lg;
+    padding-right: $grid-margins-lg;
+  }
   display: flex;
 
   flex-direction: column;

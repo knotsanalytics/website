@@ -121,3 +121,9 @@ a.small {
   font-size: 16px;
   line-height: 1.4;
 }
+
+.md-white-text {
+  p {
+    color: $white;
+  }
+}
