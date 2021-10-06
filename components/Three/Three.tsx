@@ -38,6 +38,7 @@ const Three: React.FC<TeamProps> = () => {
       setRendered(true);
       window.addEventListener("resize", onResize);
     }
+    if (rendered) return () => window.removeEventListener("resize", onResize);
   }, [height, width]);
 
   const renderScene = () => {
