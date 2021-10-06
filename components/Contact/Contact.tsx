@@ -8,6 +8,7 @@ import Button from "../../lib/Button/Button";
 import axios from "axios";
 import Icon from "../../lib/Icon/Icon";
 import ReactMarkdown from "react-markdown";
+import Dialog from "../../lib/Dialog/Dialog";
 export type ContactProps = {
   title: string;
   subtitle: string;
@@ -112,62 +113,62 @@ const Contact: React.FC<ContactProps> = ({
             action="#"
             method="POST"
           >
-            {/* <label htmlFor="name" className={`fadeInUp`}>
-              {contactForm.nameLabel}
-              <span className={styles.error}>
+            <div className={styles.inputWrap}>
+              <p className={cn(styles.error, "small")}>
                 {getVisibleError(formik, "name")}
-              </span>
-            </label> */}
-            <input
-              type="text"
-              className={`${styles.formControl} fadeInUp`}
-              id={"name"}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.name}
-              name={"name"}
-              disabled={loading}
-              placeholder={contactForm.nameLabel}
-            />
+              </p>
 
-            {/* <label htmlFor="email" className={`fadeInUp`}>
-              <span className={styles.error}>
+              <input
+                type="text"
+                className={`${styles.formControl} fadeInUp`}
+                id={"name"}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.name}
+                name={"name"}
+                disabled={loading}
+                placeholder={contactForm.nameLabel}
+              />
+            </div>
+
+            <div className={styles.inputWrap}>
+              <p className={cn(styles.error, "small")}>
                 {getVisibleError(formik, "email")}
-              </span>
-            </label> */}
-            <input
-              type="email"
-              className={`${styles.formControl} fadeInUp`}
-              id={"email"}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.email}
-              name={"email"}
-              disabled={loading}
-              placeholder={contactForm.emailLabel}
-            />
+              </p>
+              <input
+                type="email"
+                className={`${styles.formControl} fadeInUp`}
+                id={"email"}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+                name={"email"}
+                disabled={loading}
+                placeholder={contactForm.emailLabel}
+              />
+            </div>
 
-            {/* <label htmlFor="message" className={`fadeInUp`}>
-              {contactForm.messageLabel}
-              <span className={styles.error}>
+            <div className={styles.areaWrap}>
+              <p className={cn(styles.error, "small")}>
                 {getVisibleError(formik, "message")}
-              </span>
-            </label> */}
-            <textarea
-              className={`${styles.formControl} fadeInUp`}
-              id={"message"}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.message}
-              name={"message"}
-              disabled={loading}
-              placeholder={contactForm.messageLabel}
-            />
+              </p>
+              <textarea
+                className={`${styles.formControl} fadeInUp`}
+                id={"message"}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.message}
+                name={"message"}
+                disabled={loading}
+                placeholder={contactForm.messageLabel}
+              />
+            </div>
+
             <Button
               label={contactForm.ctaLabel}
               type="submit"
               className={cn(styles.cta, "fadeInUp")}
-              disabled={loading}
+              disabled={loading || !formik.isValid || !formik.dirty}
               secondary
             />
           </form>
@@ -187,6 +188,12 @@ const Contact: React.FC<ContactProps> = ({
           <p className="small">{address}</p>
         </div>
       </div>
+
+      <Dialog active={messageSent} onClose={() => setMessageSent(false)}>
+        <div className={styles.dialogContainer}>
+          <h3>{contactForm.confirmationMessage}</h3>
+        </div>
+      </Dialog>
     </div>
   );
 };

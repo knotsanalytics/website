@@ -18,8 +18,6 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
     document.getElementById("contact")?.scrollIntoView();
   };
 
-  console.log(title);
-
   return (
     <div className={cn(styles.container)} id={"hero"}>
       <Three />

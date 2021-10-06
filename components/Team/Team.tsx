@@ -30,7 +30,6 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
   const handleOpenDialog = (idx: number) => {
     const newArray = dialogs;
     newArray[idx] = true;
-    console.log(newArray);
     setDialogs((oldArray) =>
       oldArray.map((item, ix) => (ix === idx ? true : false))
     );

@@ -11,8 +11,6 @@ const mailgun = require("mailgun-js")({
 });
 
 module.exports.handler = async (event) => {
-  console.log("CONTACT_EMAIL");
-  console.log(CONTACT_EMAIL);
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
