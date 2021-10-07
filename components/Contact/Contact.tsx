@@ -176,7 +176,7 @@ const Contact: React.FC<ContactProps> = ({
           </form>
         </div>
       </div>
-      <div className={styles.footer}>
+      <footer className={styles.footer}>
         <a
           className={styles.footerItem}
           href={linkedin}
@@ -194,7 +194,7 @@ const Contact: React.FC<ContactProps> = ({
           <Icon icon="location" className={styles.footerIcon} />
           <p className="small">{address}</p>
         </div>
-      </div>
+      </footer>
 
       <Dialog active={messageSent} onClose={() => setMessageSent(false)}>
         <div className={styles.dialogContainer}>
