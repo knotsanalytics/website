@@ -7,29 +7,33 @@ en:
     high-performance computing, and computer vision to help you get a deeper
     insight into your data.
   members:
-    - bio: I am a computer and data scientist with a Ph.D. in Theoretical Physics.
-        During my years in research, I focused on Quantum Gravity and on a
-        numerical approach to gravitational physics. Here I developed
-        high-performance solutions as well as machine and deep-learning
-        algorithms and I explored their possibilities in one of the toughest
-        domains of physics. At KNOTS I make the best use of my excellent
-        analytical and numerical background and express my passion for complex
-        problems with simple and elegant solutions.
+    - bio: >-
+        I am a computer and data scientist with a Ph.D. in Theoretical Physics. 
+
+
+        During my years in research, I focused on Quantum Gravity and on a numerical approach to gravitational physics. Here I developed high-performance solutions as well as machine and deep-learning algorithms and I explored their possibilities in one of the toughest domains of physics.
+
+
+        At KNOTS I make the best use of my excellent analytical and numerical background and express my passion for complex problems with simple and elegant solutions.
       fullName: Giorgio *Sarno*
-      role: Président
+      role: President
       picture: /images/2.jpeg
       linkedin: https://www.linkedin.com/in/giorgio-sarno/
     - fullName: Simone *Fuscone*
       role: Directeur Général
       picture: /images/whatsapp-image-2021-10-06-at-19.37.04.jpeg
-      bio: I am a machine learning engineer that pursued a Ph.D. in computational
-        linguistics. I started data analysis during my master in physics where I
-        modeled spatial and neurological data. After I had the opportunity to
-        manage, analyze big financial databases, working in the IT sector for
-        one of the biggest banks in Italy.In my further studies, I joined the
-        DOC2AMU project (a Marie Curie fellowship) where I was able to learn NLP
-        techniques for applied linguistics. Every day I use my skills,
-        experience, and enthusiasm as co-founder at KNOTS.
+      bio: >-
+        I am a machine learning engineer that pursued a Ph.D. in computational
+        linguistics.
+
+
+        I started data analysis during my master in physics where I modeled spatial and neurological data. After I had the opportunity to manage, analyze big financial databases, working in the IT sector for one of the biggest banks in Italy.
+
+
+        In my further studies, I joined the DOC2AMU project (a Marie Curie fellowship) where I was able to learn NLP techniques for applied linguistics.
+
+
+        Every day I use my skills, experience, and enthusiasm as co-founder at KNOTS.
       linkedin: https://www.linkedin.com/in/simone-fuscone-ba403071/
 fr:
   title: Meet The *Founders*
@@ -41,26 +45,30 @@ fr:
     insight into your data.
   members:
     - fullName: Giorgio Sarno
-      role: President
-      bio: I am a computer and data scientist with a Ph.D. in Theoretical Physics.
-        During my years in research, I focused on Quantum Gravity and on a
-        numerical approach to gravitational physics. Here I developed
-        high-performance solutions as well as machine and deep-learning
-        algorithms and I explored their possibilities in one of the toughest
-        domains of physics. At KNOTS I make the best use of my excellent
-        analytical and numerical background and express my passion for complex
-        problems with simple and elegant solutions.
+      role: Président
+      bio: >-
+        I am a computer and data scientist with a Ph.D. in Theoretical Physics. 
+
+
+        During my years in research, I focused on Quantum Gravity and on a numerical approach to gravitational physics. Here I developed high-performance solutions as well as machine and deep-learning algorithms and I explored their possibilities in one of the toughest domains of physics.
+
+
+        At KNOTS I make the best use of my excellent analytical and numerical background and express my passion for complex problems with simple and elegant solutions.
       picture: /images/2.jpeg
       linkedin: https://www.linkedin.com/in/giorgio-sarno/
     - picture: /images/whatsapp-image-2021-10-06-at-19.37.04.jpeg
       fullName: Simone Fuscone
       role: Président
-      bio: I am a machine learning engineer that pursued a Ph.D. in computational
-        linguistics. I started data analysis during my master in physics where I
-        modeled spatial and neurological data. After I had the opportunity to
-        manage, analyze big financial databases, working in the IT sector for
-        one of the biggest banks in Italy. In my further studies, I joined the
-        DOC2AMU project (a Marie Curie fellowship) where I was able to learn NLP
-        techniques for applied linguistics. Every day I use my skills,
-        experience, and enthusiasm as co-founder at KNOTS.
+      bio: >-
+        I am a machine learning engineer that pursued a Ph.D. in computational
+        linguistics.
+
+
+        I started data analysis during my master in physics where I modeled spatial and neurological data. After I had the opportunity to manage, analyze big financial databases, working in the IT sector for one of the biggest banks in Italy.
+
+
+        In my further studies, I joined the DOC2AMU project (a Marie Curie fellowship) where I was able to learn NLP techniques for applied linguistics.
+
+
+        Every day I use my skills, experience, and enthusiasm as co-founder at KNOTS.
       linkedin: https://www.linkedin.com/in/simone-fuscone-ba403071/
