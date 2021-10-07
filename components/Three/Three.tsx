@@ -82,16 +82,24 @@ const Three: React.FC<TeamProps> = () => {
       scene.add(mesh);
       const clock = new THREE.Clock();
 
-      // Particles
+      // Particles TetrahedronBufferGeometry
       const group = new THREE.Group();
-      const pGeometry = new THREE.TetrahedronGeometry(7);
-      const pMaterial = new THREE.MeshStandardMaterial({
+
+      const pGeometry = new THREE.TetrahedronBufferGeometry(7);
+      var pGeo = new WireframeGeometry2(pGeometry);
+      //   const pMaterial = new THREE.MeshStandardMaterial({
+      //     color: 0xffffff,
+      //     flatShading: false,
+      //     wireframe: true,
+      //   });
+      const pMatLine = new LineMaterial({
         color: 0xffffff,
-        flatShading: false,
+        linewidth: 2,
       });
+      pMatLine.resolution.set(window.innerWidth, window.innerHeight);
 
       for (let i = 0; i < 100; i++) {
-        const pMesh = new THREE.Mesh(pGeometry, pMaterial);
+        const pMesh = new THREE.Mesh(pGeo, pMatLine);
 
         pMesh.position.x = Math.random() * 1500 - 750 + 0;
         pMesh.position.y = Math.random() * 1500 - 750;

@@ -28,7 +28,7 @@ const Icon: React.FC<IconProps> = ({ className, icon, color, onClick }) => {
           : undefined
       }
       src={`/icons/${icon}.svg`}
-      useRequestCache={false}
+      useRequestCache={true}
       wrapper="span"
     />
   );

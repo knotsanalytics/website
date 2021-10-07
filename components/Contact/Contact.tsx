@@ -48,6 +48,7 @@ const Contact: React.FC<ContactProps> = ({
 }) => {
   const [messageSent, setMessageSent] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
+  console.log(linkedin);
 
   const formik = useFormik({
     initialValues: {
