@@ -198,7 +198,7 @@ const Contact: React.FC<ContactProps> = ({
 
       <Dialog active={messageSent} onClose={() => setMessageSent(false)}>
         <div className={styles.dialogContainer}>
-          <h3>{contactForm.confirmationMessage}</h3>
+          <ReactMarkdown>{contactForm.confirmationMessage}</ReactMarkdown>
         </div>
       </Dialog>
     </div>

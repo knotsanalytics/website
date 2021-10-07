@@ -226,6 +226,6 @@ collections:
               - {
                   label: Confirmation Message,
                   name: confirmationMessage,
-                  widget: string,
+                  widget: markdown,
                   i18n: true,
                 }
