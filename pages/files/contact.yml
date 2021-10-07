@@ -8,7 +8,12 @@ en:
     emailLabel: Your Email
     messageLabel: Your Message
     ctaLabel: Send Message
-    confirmationMessage: Your message was sent successfully! We'll be in touch.
+    confirmationMessage: |-
+      ### *Thank you!*
+
+      Your message was sent successfully!
+
+      We'll be in touch.
   subtitle: Have a project for us, or just want to say hi? Feel free to send us an
     email at *knots.analytics@gmail.com* or use the form below.
 fr:
@@ -17,7 +22,12 @@ fr:
   phone: +33 780558564 / +39 3337417067
   linkedin: www.linkedin.com/company/knotsanalytics
   contactForm:
-    confirmationMessage: Your message was sent successfully! We'll be in touch.
+    confirmationMessage: |-
+      ### *Thank you!*
+
+      Your message was sent successfully!
+
+      We'll be in touch.
     ctaLabel: Send Message
     messageLabel: Your Message
     emailLabel: Your Email
