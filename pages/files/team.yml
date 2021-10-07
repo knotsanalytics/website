@@ -1,6 +1,11 @@
 en:
   title: Meet The *Founders*
-  subtitle: Something about the team
+  subtitle: At KNOTS we have profound knowledge and experience in developing and
+    integrating algorithms using the best technologies on the market. We have an
+    extended academical and professional record, and we apply our expertise in
+    AI, natural language processing, predictive analytics, high-performance
+    computing, and computer vision to help you get a deeper insight into your
+    data every day.
   members:
     - bio: I am a computer and data scientist with a Ph.D. in Theoretical Physics.
         During my years in research, I focused on Quantum Gravity and on a
@@ -28,7 +33,12 @@ en:
       linkedin: https://www.linkedin.com/in/simone-fuscone-ba403071/
 fr:
   title: Meet The *Founders*
-  subtitle: Something about the team
+  subtitle: At KNOTS we have profound knowledge and experience in developing and
+    integrating algorithms using the best technologies on the market. We have an
+    extended academical and professional record, and we apply our expertise in
+    AI, natural language processing, predictive analytics, high-performance
+    computing, and computer vision to help you get a deeper insight into your
+    data every day.
   members:
     - fullName: Giorgio Sarno
       role: President
