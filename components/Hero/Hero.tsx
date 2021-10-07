@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../lib/Button/Button";
 import styles from "./Hero.module.scss";
 import cn from "classnames";
@@ -17,12 +17,18 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
   const handleGetInTouch = () => {
     document.getElementById("contact")?.scrollIntoView();
   };
+  const [loaded, setLoaded] = useState<boolean>(false);
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
 
   return (
     <div className={cn(styles.container)} id={"hero"}>
-      <div className={styles.canvasContaner}>
-        <Three />
-      </div>
+      {loaded && (
+        <div className={styles.canvasContaner}>
+          <Three />
+        </div>
+      )}
 
       <div className={cn("grid")}>
         <h5 className={cn(styles.eyebrow, "")}>{eyebrow}</h5>
