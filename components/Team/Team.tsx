@@ -47,7 +47,11 @@ const Team: React.FC<TeamProps> = ({ title, subtitle, members }) => {
               {title}
             </ReactMarkdown>
           </h2>
-          <p className={cn(styles.subtitle, "fadeInUp")}>{subtitle}</p>
+        </div>
+        <div className={`col-12 col-sm-10 col-md-8 col-lg-9`}>
+          <p className={cn(styles.subtitle, "fadeInUp", "responsive")}>
+            {subtitle}
+          </p>
         </div>
         {members.map((member, idx) => (
           <div

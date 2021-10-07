@@ -10,11 +10,11 @@
   color: $white;
   padding: 10px 30px;
   cursor: pointer;
-  transition: all 0.5s ease 0s;
+  transition: background-color 0.3s ease;
 
   &:hover:not(&:disabled) {
-    transition: all 0.5s ease 0s;
-    background-color: #ddaf48;
+    transition: background-color 0.3s ease;
+    background-color: $dark-yellow;
   }
   &:disabled {
     opacity: 0.7;

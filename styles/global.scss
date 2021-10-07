@@ -122,6 +122,16 @@ a.small {
   line-height: 1.4;
 }
 
+p.responsive,
+a.responsive {
+  font-size: 16px;
+  line-height: 1.4;
+  @media only screen and (min-width: $breakpoint-sm) {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
 .md-white-text {
   p {
     color: $white;
