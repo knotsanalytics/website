@@ -31,15 +31,15 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
       )}
 
       <div className={cn("grid")}>
-        <h5 className={cn(styles.eyebrow, "")}>{eyebrow}</h5>
+        <h5 className={cn(styles.eyebrow, "heroItem")}>{eyebrow}</h5>
         <div
           className={cn(
             "col-12 col-start-sm-1 col-end-sm-6 col-start-md-1 col-end-md-6 col-start-lg-1 col-end-lg-6"
           )}
         >
-          <h1>
+          <h1 className={"heroItem"}>
             <ReactMarkdown
-              className={cn(``, styles.title)}
+              className={cn(styles.title)}
               components={{ p: "span" }}
             >
               {title}
@@ -51,9 +51,9 @@ const Hero: React.FC<HeroProps> = ({ title, subtitle, eyebrow, ctaLabel }) => {
             "col-12 col-start-sm-1 col-end-sm-7 col-start-md-1 col-end-md-7 col-start-lg-1 col-end-lg-7"
           }
         >
-          <p className={""}>{subtitle}</p>
+          <p className={"heroItem"}>{subtitle}</p>
         </div>
-        <div className={cn(styles.buttonWrap, "")}>
+        <div className={cn(styles.buttonWrap, "heroItem")}>
           <Button label={ctaLabel} onClicked={handleGetInTouch} />
         </div>
       </div>

@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Navigation.module.scss";
 import { useRouter } from "next/router";
 import cn from "classnames";
 import Burger from "../Burger";
 import { gsap } from "gsap";
+
 export type NavigationProps = {
   handleElClick: (idx: number) => void;
   handleHomeClick: () => void;

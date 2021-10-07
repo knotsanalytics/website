@@ -97,9 +97,7 @@ const Contact: React.FC<ContactProps> = ({
             </ReactMarkdown>
           </h2>
 
-          <ReactMarkdown
-            className={cn(`fadeInUp`, `md-white-text`, styles.subtitle)}
-          >
+          <ReactMarkdown className={cn(`fadeInUp`, styles.subtitle)}>
             {subtitle}
           </ReactMarkdown>
         </div>

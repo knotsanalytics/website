@@ -32,7 +32,9 @@ const Mission: React.FC<MissionProps> = ({
         <div
           className={`col-12 col-sm-10 col-md-9 col-lg-7 ${styles.bodyLargeCol}`}
         >
-          <p className={cn("fadeInUp large")}>{description}</p>
+          <p className={cn("fadeInUp large", styles.description)}>
+            {description}
+          </p>
         </div>
         {missionSections.map((section, idx) => (
           <div

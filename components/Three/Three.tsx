@@ -72,7 +72,7 @@ const Three: React.FC<TeamProps> = () => {
       var geometry = new WireframeGeometry2(geo);
       const matLine = new LineMaterial({
         color: 0xffffff,
-        linewidth: 3,
+        linewidth: 2,
       });
       matLine.resolution.set(window.innerWidth, window.innerHeight);
       const mesh = new Wireframe(geometry, matLine);

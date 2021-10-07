@@ -32,17 +32,39 @@ export default function Index({ hero, mission, team, contact }: Props) {
     /////////////////////
     const fadeInUpTween = document.querySelectorAll(".fadeInUp");
     fadeInUpTween.forEach((item, idx) => {
-      gsap.from(item, {
-        scrollTrigger: {
-          trigger: item,
-          start: "top 95%",
+      gsap.fromTo(
+        item,
+        {
+          y: 40,
+          opacity: 0,
         },
+        {
+          scrollTrigger: {
+            trigger: item,
+            start: "top 95%",
+          },
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "Power2.easeOut",
+        }
+      );
+    });
+    gsap.fromTo(
+      ".heroItem",
+      {
         y: 40,
         opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
         duration: 1,
         ease: "Power2.easeOut",
-      });
-    });
+        delay: 0.4,
+        stagger: 0.1,
+      }
+    );
   };
   return (
     <StoreProvider>
