@@ -21,7 +21,7 @@ type Props = {
 export default function Index({ hero, mission, team, contact }: Props) {
   useEffect(() => {
     initAnimations();
-    window.history.scrollRestoration = "manual";
+    // window.history.scrollRestoration = "manual";
   }, []);
 
   const initAnimations = () => {
