@@ -41,6 +41,22 @@ export default function BasicMeta({
       <link rel="manifest" href="/site.webmanifest" />
       {/* <link rel="apple-touch-icon" href="/icon.png" /> */}
       <meta name="theme-color" content="#fefefe" />
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${"G-DZRSW2E4PP"}`}
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${"G-DZRSW2E4PP"}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
     </Head>
   );
 }
