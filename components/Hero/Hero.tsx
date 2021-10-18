@@ -3,7 +3,7 @@ import Button from "../../lib/Button/Button";
 import styles from "./Hero.module.scss";
 import cn from "classnames";
 import ReactMarkdown from "react-markdown";
-import Three from "../Three/Three";
+import Three from "../../lib/Three/Three";
 
 export type HeroProps = {
   title: string;

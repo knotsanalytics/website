@@ -5,7 +5,7 @@ import Mission, { MissionProps } from "../components/Mission/Mission";
 import Team, { TeamProps } from "../components/Team/Team";
 import Contact, { ContactProps } from "../components/Contact/Contact";
 import React, { useEffect } from "react";
-import BasicMeta from "../components/meta/BasicMeta";
+import BasicMeta from "../lib/Meta/BasicMeta";
 import Layout from "../components/Layout/Layout";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
