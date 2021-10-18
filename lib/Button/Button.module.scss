@@ -18,8 +18,10 @@
   }
   &:disabled {
     opacity: 0.7;
-
     cursor: not-allowed;
+  }
+  &.loading {
+    color: transparent;
   }
 }
 
@@ -35,5 +37,37 @@
   &:disabled {
     opacity: 0.7 !important;
     cursor: not-allowed;
+  }
+  &.loading {
+    color: transparent;
+  }
+}
+
+.spinner {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+}
+.spinner:after {
+  box-sizing: border-box;
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

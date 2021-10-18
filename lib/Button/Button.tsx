@@ -11,6 +11,7 @@ export type ButtonProps = {
   disabled?: boolean;
   className?: string;
   secondary?: boolean;
+  loading?: boolean;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -20,17 +21,20 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
   className,
   secondary,
+  loading,
 }) => {
   return (
     <button
       className={cn(styles.button, className, {
         [styles.secondary]: secondary,
+        [styles.loading]: loading,
       })}
       type={type}
       onClick={onClicked ? onClicked : undefined}
       disabled={disabled}
     >
       {label}
+      {loading && <span className={styles.spinner}></span>}
     </button>
   );
 };

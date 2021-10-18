@@ -171,6 +171,7 @@ const Contact: React.FC<ContactProps> = ({
                 className={cn(styles.cta, "fadeInUp")}
                 disabled={loading || !formik.isValid || !formik.dirty}
                 secondary
+                loading={loading}
               />
             </form>
           </div>
