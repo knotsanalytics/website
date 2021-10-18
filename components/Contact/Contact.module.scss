@@ -1,5 +1,9 @@
 @import "styles/variables";
 
+.contactSpacer {
+  padding-top: 100px;
+}
+
 .contactContainer {
   padding: 150px 0 0 0;
   background-color: $dark-blue;
@@ -165,9 +169,7 @@
     text-decoration: none;
     opacity: 0.7;
     margin-bottom: 22px;
-    @media only screen and (min-width: $breakpoint-md) {
-      margin-bottom: 0;
-    }
+
     .footerIcon {
       height: 20px;
       width: 20px;
@@ -182,43 +184,29 @@
       color: $light-blue;
     }
   }
-}
-
-.copyrights {
-  padding: 25px 0 25px 0;
-  width: 100%;
-  background-color: #0d0e1f;
-  @media only screen and (min-width: $breakpoint-md) {
-    padding: 50px 0 25px 0;
-  }
-  .flex {
-    display: flex;
-
-    flex-direction: column;
-    @media only screen and (min-width: $breakpoint-md) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-
   .rights {
     font-family: $mono_font_family;
     color: $white;
-    margin-left: 10px;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1;
     color: $light-blue;
-    opacity: 0.6;
+    text-align: center;
+    opacity: 0.7;
+    @media only screen and (min-width: $breakpoint-md) {
+      text-align: right;
+    }
     a {
       font-size: inherit;
       color: inherit;
       font-family: inherit;
     }
     &:first-of-type {
-      margin-bottom: 10px;
+      margin-bottom: 22px;
+      margin-top: 44px;
+      margin-bottom: 12px;
       @media only screen and (min-width: $breakpoint-md) {
-        margin-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 22px;
       }
     }
   }
