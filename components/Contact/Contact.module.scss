@@ -24,9 +24,6 @@
     @media only screen and (min-width: $breakpoint-md) {
       margin-bottom: 90px;
     }
-    em {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -94,7 +91,6 @@
     }
   }
   textarea {
-    // margin-bottom: 30px;
     border: 1px solid $black;
     border-radius: 10px;
     color: $black;
@@ -139,24 +135,28 @@
 .footer {
   background-color: $darker-blue;
   padding: 50px 0 30px 0;
-  padding-left: $grid-margins;
-  padding-right: $grid-margins;
+  // padding-left: $grid-margins;
+  // padding-right: $grid-margins;
 
-  @media only screen and (min-width: $breakpoint-sm) {
-    padding-left: $grid-margins-sm;
-    padding-right: $grid-margins-sm;
-  }
-  @media only screen and (min-width: $breakpoint-lg) {
-    padding-left: $grid-margins-lg;
-    padding-right: $grid-margins-lg;
-  }
-  display: flex;
+  // @media only screen and (min-width: $breakpoint-sm) {
+  //   padding-left: $grid-margins-sm;
+  //   padding-right: $grid-margins-sm;
+  // }
+  // @media only screen and (min-width: $breakpoint-lg) {
+  //   padding-left: $grid-margins-lg;
+  //   padding-right: $grid-margins-lg;
+  // }
 
-  flex-direction: column;
-  @media only screen and (min-width: $breakpoint-md) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  .itemsContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+    @media only screen and (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   .footerItem {
@@ -185,12 +185,43 @@
 }
 
 .copyrights {
-  font-family: $mono_font_family;
-  font-size: 12px;
-  text-align: center;
-  margin: auto;
-  padding: 0 15px;
-  opacity: 0.7;
+  padding: 25px 0 25px 0;
+  width: 100%;
+  background-color: #0d0e1f;
+  @media only screen and (min-width: $breakpoint-md) {
+    padding: 50px 0 25px 0;
+  }
+  .flex {
+    display: flex;
+
+    flex-direction: column;
+    @media only screen and (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .rights {
+    font-family: $mono_font_family;
+    color: $white;
+    margin-left: 10px;
+    font-size: 11px;
+    line-height: 1;
+    color: $light-blue;
+    opacity: 0.6;
+    a {
+      font-size: inherit;
+      color: inherit;
+      font-family: inherit;
+    }
+    &:first-of-type {
+      margin-bottom: 10px;
+      @media only screen and (min-width: $breakpoint-md) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .dialogContainer {

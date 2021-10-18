@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import styles from "./Navigation.module.scss";
 import { useRouter } from "next/router";
 import cn from "classnames";
-import Burger from "../Burger";
 import { gsap } from "gsap";
+import Burger from "../../lib/Burger/Burger";
 
 export type NavigationProps = {
   handleElClick: (idx: number) => void;
@@ -18,9 +18,9 @@ const Navigation: React.FC<NavigationProps> = ({
   handleHomeClick,
 }) => {
   const [active, setActive] = useState(false);
-  const [DD, setDD] = useState(false);
-  const locales = useRouter().locales;
-  const locale = useRouter().locale;
+  // const [DD, setDD] = useState(false);
+  // const locales = useRouter().locales;
+  // const locale = useRouter().locale;
 
   const handleElClicked = (idx: number) => {
     setActive(false);
@@ -73,7 +73,7 @@ const Navigation: React.FC<NavigationProps> = ({
           {item}
         </a>
       ))}
-      <div
+      {/* <div
         className={cn(styles.lang, { [styles.active]: active })}
         onClick={() => setDD(!DD)}
       >
@@ -97,7 +97,7 @@ const Navigation: React.FC<NavigationProps> = ({
                 </Link>
               ))}
         </div>
-      </div>
+      </div> */}
       <Burger active={active} onClick={() => setActive(!active)} />
       <div className={cn(styles.mobileBg, { [styles.active]: active })}></div>
     </nav>

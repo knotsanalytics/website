@@ -175,24 +175,48 @@ const Contact: React.FC<ContactProps> = ({
         </div>
       </div>
       <footer className={styles.footer}>
-        <a
-          className={styles.footerItem}
-          href={linkedin}
-          rel="noopener"
-          target="_blank"
-        >
-          <Icon icon="linkedin" className={styles.footerIcon} />
-          <p className="small">{linkedin}</p>
-        </a>
-        <div className={styles.footerItem}>
-          <Icon icon="phone" className={styles.footerIcon} />
-          <p className="small">{phone}</p>
-        </div>
-        <div className={styles.footerItem}>
-          <Icon icon="location" className={styles.footerIcon} />
-          <p className="small">{address}</p>
+        <div className="grid">
+          <div className={styles.itemsContainer}>
+            <a
+              className={styles.footerItem}
+              href={linkedin}
+              rel="noopener"
+              target="_blank"
+            >
+              <Icon icon="linkedin" className={styles.footerIcon} />
+              <p className="small">{"Linkedin"}</p>
+            </a>
+            <div className={styles.footerItem}>
+              <Icon icon="phone" className={styles.footerIcon} />
+              <p className="small">{phone}</p>
+            </div>
+            <div className={styles.footerItem}>
+              <Icon icon="location" className={styles.footerIcon} />
+              <p className="small">{address}</p>
+            </div>
+          </div>
         </div>
       </footer>
+
+      <div className={styles.copyrights}>
+        <div className={cn("grid", styles.grid)}>
+          <div className={styles.flex}>
+            <p className={styles.rights}>
+              © Copyright 2021 Knots. All rights reserved.
+            </p>
+            <p className={styles.rights}>
+              Designed and developed by{" "}
+              <a
+                href="https://tommasolaterza.io"
+                rel="noopener"
+                target="_blank"
+              >
+                Tommaso Laterza
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
 
       <Dialog active={messageSent} onClose={() => setMessageSent(false)}>
         <div className={styles.dialogContainer}>

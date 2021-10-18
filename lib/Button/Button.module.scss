@@ -33,7 +33,7 @@
     background-color: $light-bg;
   }
   &:disabled {
-    opacity: 0.7;
+    opacity: 0.7 !important;
     cursor: not-allowed;
   }
 }

@@ -1,0 +1,46 @@
+@import "styles/variables";
+
+.container {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 2;
+  background-color: transparent;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.meat {
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #222;
+  top: calc(50% - 2px / 2);
+  left: calc(50% - 20px / 2);
+  transition: all 150ms ease-in;
+}
+.meat1 {
+  transform: translateY(-10px);
+}
+.meat2 {
+  width: calc(20px - 6px);
+}
+.meat3 {
+  transform: translateY(10px);
+}
+.active .meat1 {
+  transform: rotate(45deg);
+}
+.active .meat2 {
+  opacity: 0;
+}
+.active .meat3 {
+  transform: rotate(-45deg);
+}
+
+@media only screen and (min-width: $breakpoint-sm) {
+  .container {
+    display: none;
+  }
+}
