@@ -6,7 +6,6 @@ import * as THREE from "three";
 import { WireframeGeometry2 } from "three/examples/jsm/lines/WireframeGeometry2.js";
 import { LineMaterial } from "three/examples/jsm/lines/LineMaterial.js";
 import { Wireframe } from "three/examples/jsm/lines/Wireframe.js";
-import { Context } from "../../lib/StoreProvider/StoreProvider";
 
 export type TeamProps = {};
 
@@ -15,7 +14,6 @@ const Three: React.FC<TeamProps> = () => {
   const [height, setHeight] = useState<number>(0);
   const [width, setWidth] = useState<number>(0);
   const [rendered, setRendered] = useState<boolean>(false);
-  const pos = useContext(Context);
 
   let renderer: any;
   let camera: any;
@@ -121,7 +119,6 @@ const Three: React.FC<TeamProps> = () => {
       const animate = () => {
         //Animate Models Here
         mesh.rotateOnAxis(new THREE.Vector3(0, 1, 0), 0.001);
-        mesh.rotation.y = (pos.x / innerWidth) * 2 - 1;
 
         group.rotation.y += clock.getDelta() * 0.05;
         renderScene();

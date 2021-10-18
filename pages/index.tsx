@@ -9,7 +9,6 @@ import BasicMeta from "../components/meta/BasicMeta";
 import Layout from "../components/Layout/Layout";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { StoreProvider } from "../lib/StoreProvider/StoreProvider";
 
 type Props = {
   hero: HeroProps;
@@ -67,15 +66,13 @@ export default function Index({ hero, mission, team, contact }: Props) {
     );
   };
   return (
-    <StoreProvider>
-      <Layout navItems={hero.navigation_tags}>
-        <BasicMeta url={"/"} />
-        <Hero {...hero} />
-        <Mission {...mission} />
-        <Team {...team} />
-        <Contact {...contact} />
-      </Layout>
-    </StoreProvider>
+    <Layout navItems={hero.navigation_tags}>
+      <BasicMeta url={"/"} />
+      <Hero {...hero} />
+      <Mission {...mission} />
+      <Team {...team} />
+      <Contact {...contact} />
+    </Layout>
   );
 }
 
