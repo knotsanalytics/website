@@ -39,8 +39,16 @@ export default function BasicMeta({
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="manifest" href="/site.webmanifest" />
-      {/* <link rel="apple-touch-icon" href="/icon.png" /> */}
       <meta name="theme-color" content="#fefefe" />
+
+      <meta property="og:title" content="Knots" />
+      <meta property="og:image" content="/images/sharePic.png" />
+      <meta
+        property="og:description"
+        content="Get deeper insights into your data"
+      />
+      <meta property="og:url" content="https://knotsanalytics.com/" />
+
       <script
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${"G-DZRSW2E4PP"}`}
