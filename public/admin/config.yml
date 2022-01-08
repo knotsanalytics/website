@@ -190,6 +190,10 @@ collections:
             name: address
             widget: string
             i18n: duplicate
+          - label: Vat Number
+            name: vatNumber
+            widget: string
+            i18n: duplicate
           - label: Phone
             name: phone
             widget: string

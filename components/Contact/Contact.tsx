@@ -14,6 +14,7 @@ export type ContactProps = {
   subtitle: string;
   email: string;
   address: string;
+  vatNumber: string;
   linkedin: string;
   phone: string;
   contactForm: {
@@ -45,6 +46,7 @@ const Contact: React.FC<ContactProps> = ({
   linkedin,
   phone,
   contactForm,
+  vatNumber,
 }) => {
   const [messageSent, setMessageSent] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
@@ -195,6 +197,10 @@ const Contact: React.FC<ContactProps> = ({
               <div className={styles.footerItem}>
                 <Icon icon="location" className={styles.footerIcon} />
                 <p className="small">{address}</p>
+              </div>
+              <div className={styles.footerItem}>
+                <Icon icon="vat" className={styles.footerIcon} />
+                <p className="small">VAT: {vatNumber}</p>
               </div>
             </div>
             <div className={"col-12 col-md-6"}>
