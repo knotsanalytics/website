@@ -1,34 +1,34 @@
 en:
   missionSections:
     - eyebrow: qewqw
-      title: We tackle complex problems
-      body: and we get the best results applying our in-depth understanding and
-        knowledge of big data.
+      title: "We develop algorithms "
+      body: to assist fishing vessel to program and predict their missions.
+    - eyebrow: qwrqewr
+      title: "We perform powerful analysis "
+      body: to help enforcing management and conservation strategies with quantitative
+        and informed decisions.
     - eyebrow: qwrqewr
       title: We are experts in data science
       body: and data-driven predictive analytics with a focus on machine and deep
         learning.
-    - eyebrow: qwrqewr
-      title: "We are specialists in optimizing  "
-      body: "and proving new and reliable high-performance computing and AI solutions.
-        "
   eyebrow: What we do
   description: We implement and use machine learning tools and algorithms to help
-    companies to develop breakthrough AI products.
+    companies and organization to analyze and use their data in the domain of
+    fisheries and the marine enviroment.
 fr:
   missionSections:
     - eyebrow: qwrqer
-      title: We tackle complex problems
-      body: and we get the best results applying our in-depth understanding and
-        knowledge of big data.
+      title: "We develop algorithms "
+      body: to assist fishing vessel to program and predict their missions.
     - eyebrow: qerwqer
+      title: "We perform powerful analysis "
+      body: to help enforcing management and conservation strategies with quantitative
+        and informed decisions.
+    - eyebrow: qwreqwer
       title: We are experts in data science
       body: and data-driven predictive analytics with a focus on machine and deep
         learning.
-    - eyebrow: qwreqwer
-      title: "We are specialists in optimizing  "
-      body: "and proving new and reliable high-performance computing and AI solutions.
-        "
   description: We implement and use machine learning tools and algorithms to help
-    companies to develop breakthrough AI products.
+    companies and organization to analyze and use their data in the domain of
+    fisheries and the marine enviroment.
   eyebrow: What we do
