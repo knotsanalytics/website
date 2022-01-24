@@ -3,9 +3,8 @@ en:
   subtitle: We have profound knowledge and experience in developing and
     integrating algorithms using the best technologies on the market. With an
     extended academical and professional record, we apply every day our
-    expertise in AI, natural language processing, predictive analytics,
-    high-performance computing, and computer vision to help you get a deeper
-    insight into your data.
+    expertise in AI, predictive analytics, and computer vision to help you get a
+    deeper insight into your data.
   members:
     - bio: >-
         I am a computer and data scientist with a Ph.D. in Theoretical Physics. 
@@ -40,9 +39,8 @@ fr:
   subtitle: We have profound knowledge and experience in developing and
     integrating algorithms using the best technologies on the market. With an
     extended academical and professional record, we apply every day our
-    expertise in AI, natural language processing, predictive analytics,
-    high-performance computing, and computer vision to help you get a deeper
-    insight into your data.
+    expertise in AI, predictive analytics, and computer vision to help you get a
+    deeper insight into your data.
   members:
     - fullName: Giorgio Sarno
       role: Président
