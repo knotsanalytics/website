@@ -2,7 +2,7 @@ en:
   missionSections:
     - eyebrow: qewqw
       title: "We develop algorithms "
-      body: to assist fishing vessel to program and predict their missions.
+      body: to assist fishing vessels to program and predict their missions.
     - eyebrow: qwrqewr
       title: "We perform powerful analysis "
       body: to help enforcing management and conservation strategies with quantitative
@@ -13,13 +13,13 @@ en:
         learning.
   eyebrow: What we do
   description: We implement and use machine learning tools and algorithms to help
-    companies and organization to analyze and use their data in the domain of
+    companies and organizations to analyze and use their data in the field of
     fisheries and the marine enviroment.
 fr:
   missionSections:
     - eyebrow: qwrqer
       title: "We develop algorithms "
-      body: to assist fishing vessel to program and predict their missions.
+      body: to assist fishing vessels to program and predict their missions.
     - eyebrow: qerwqer
       title: "We perform powerful analysis "
       body: to help enforcing management and conservation strategies with quantitative
@@ -29,6 +29,6 @@ fr:
       body: and data-driven predictive analytics with a focus on machine and deep
         learning.
   description: We implement and use machine learning tools and algorithms to help
-    companies and organization to analyze and use their data in the domain of
+    companies and organizations to analyze and use their data in the field of
     fisheries and the marine enviroment.
   eyebrow: What we do
