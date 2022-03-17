@@ -18,17 +18,19 @@ en:
 fr:
   missionSections:
     - eyebrow: qwrqer
-      title: "We develop algorithms "
-      body: to assist fishing vessels to program and predict their missions.
+      title: "Nous développons des algorithmes "
+      body: " pour aider les navires de pêche à programmer et à planifier leurs
+        missions."
     - eyebrow: qerwqer
-      title: "We perform powerful analysis "
-      body: to help enforcing management and conservation strategies with quantitative
-        and informed decisions.
+      title: "Nous effectuons des analyses performantes "
+      body: pour aider à la mise en œuvre des stratégies de gestion et de conservation
+        par des décisions quantitatives et informées.
     - eyebrow: qwreqwer
-      title: We are experts in data science
-      body: and data-driven predictive analytics with a focus on machine and deep
-        learning.
-  description: We implement and use machine learning tools and algorithms to help
-    companies and organizations to analyze and use their data in the field of
-    fisheries and the marine environment.
-  eyebrow: What we do
+      title: Nous sommes experts en science des données
+      body: " et en analyse prédictive basée sur les données, avec un intérêt
+        particulier pour l'apprentissage automatique et profond."
+  description: Nous développons et utilisons des algorithmes et des outils
+    d'apprentissage automatique pour aider les entreprises et les organisations
+    à analyser et à utiliser leurs données dans le domaine de la pêche et de
+    l'environnement marin.
+  eyebrow: Que faisons-nous ?
