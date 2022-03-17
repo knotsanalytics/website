@@ -26,7 +26,7 @@ en:
         linguistics.
 
 
-        I started data analysis during my master in physics where I modeled spatial and neurological data. After I had the opportunity to manage, analyze big financial databases, working in the IT sector for one of the biggest banks in Italy.
+        I started data analysis during my Master in physics, where I modeled spatial and neurological data. After I had the opportunity to manage, analyze big financial databases, working in the IT sector for one of the biggest banks in Italy.
 
 
         In my further studies, I joined the DOC2AMU project (a Marie Curie fellowship) where I was able to learn NLP techniques for applied linguistics.
@@ -35,38 +35,46 @@ en:
         Every day I use my skills, experience, and enthusiasm as co-founder at KNOTS.
       linkedin: https://www.linkedin.com/in/simone-fuscone-ba403071/
 fr:
-  title: Meet The *Founders*
-  subtitle: We have profound knowledge and experience in developing and
-    integrating algorithms using the best technologies on the market. With an
-    extended academical and professional record, we apply every day our
-    expertise in AI, predictive analytics, and computer vision to help you get a
-    deeper insight into your data.
+  title: Les *Fondateurs*
+  subtitle: Nous avons une connaissance et une expérience approfondies du
+    développement et de l'intégration d'algorithmes à l'aide des meilleures
+    technologies du marché. Forts d'un parcours académique et professionnel
+    riche, nous appliquons chaque jour notre expertise en IA et en analyse
+    prédictive pour vous aider à obtenir une vision plus approfondie de vos
+    données.
   members:
     - fullName: Giorgio Sarno
       role: Président
       bio: >-
-        I am a computer and data scientist with a Ph.D. in Theoretical Physics. 
+        Je suis un computer et un data scientist avec un doctorat en physique
+        théorique. 
 
 
-        During my years in research, I focused on Quantum Gravity and on a numerical approach to gravitational physics. Here I developed high-performance solutions as well as machine and deep-learning algorithms and I explored their possibilities in one of the toughest domains of physics.
+        Pendant mes années de recherche, je me suis concentré sur la gravité quantique et sur une approche numérique de la physique gravitationnelle. J'y ai développé des solutions de haute performance ainsi que des algorithmes d'apprentissage automatique et profond et j'ai exploré leurs possibilités dans l'un des domaines les plus difficiles de la physique.
 
 
-        At KNOTS I make the best use of my excellent analytical and numerical background and express my passion for complex problems with simple and elegant solutions.
+        Chez KNOTS, je fais le meilleur usage de mon excellent bagage analytique et numérique et j'exprime ma passion pour les problèmes complexes avec des solutions simples et élégantes.
+
+
+        Traduit avec www.DeepL.com/Translator (version gratuite)
       picture: /images/2.jpeg
       linkedin: https://www.linkedin.com/in/giorgio-sarno/
     - picture: /images/whatsapp-image-2021-10-06-at-19.37.04.jpeg
       fullName: Simone Fuscone
-      role: Président
+      role: Directeur
       bio: >-
-        I am a machine learning engineer that pursued a Ph.D. in computational
-        linguistics.
+        Je suis un ingénieur en apprentissage machine qui a poursuivi un
+        doctorat en linguistique computationnelle.
 
 
-        I started data analysis during my master in physics where I modeled spatial and neurological data. After I had the opportunity to manage, analyze big financial databases, working in the IT sector for one of the biggest banks in Italy.
+        J'ai commencé l'analyse de données pendant mon master en physique où j'ai modélisé des données spatiales et neurologiques. Ensuite, j'ai eu l'occasion de gérer et d'analyser de grandes bases de données financières, en travaillant dans le secteur informatique pour l'une des plus grandes banques d'Italie.
 
 
-        In my further studies, I joined the DOC2AMU project (a Marie Curie fellowship) where I was able to learn NLP techniques for applied linguistics.
+        Dans le cadre de mes études, j'ai rejoint le projet DOC2AMU (une bourse Marie Curie) où j'ai pu apprendre les techniques NLP pour la linguistique appliquée.
 
 
-        Every day I use my skills, experience, and enthusiasm as co-founder at KNOTS.
+        Chaque jour, j'utilise mes compétences, mon expérience et mon enthousiasme en tant que cofondateur de KNOTS.
+
+
+        Traduit avec www.DeepL.com/Translator (version gratuite)
       linkedin: https://www.linkedin.com/in/simone-fuscone-ba403071/
