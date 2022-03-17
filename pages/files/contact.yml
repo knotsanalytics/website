@@ -1,6 +1,6 @@
 en:
   title: Get in *Touch*
-  address: 5 Rue Pavillon, 13001 Marseille, France
+  address: 3A Rue Neuve Sainte Catherine, 13007, Marseille
   vatNumber: FR21902924794
   phone: +33 780558564 / +39 3337417067
   linkedin: https://www.linkedin.com/company/knotsanalytics
@@ -15,25 +15,24 @@ en:
       Your message was sent successfully!
 
       We'll be in touch.
-  subtitle:
-    Have a project for us, or just want to say hi? Feel free to send us an
+  subtitle: Have a project for us, or just want to say hi? Feel free to send us an
     email at *knots.analytics@gmail.com* or use the form below.
 fr:
-  title: Get in *Touch*
-  address: 5 Rue Pavillon, 13001 Marseille, France
+  title: Nous *Contacter*
+  address: 3A Rue Neuve Sainte Catherine, 13007, Marseille
   phone: +33 780558564 / +39 3337417067
   linkedin: https://www.linkedin.com/company/knotsanalytics
   contactForm:
     confirmationMessage: |-
-      ### *Thank you!*
+      ### *Merci!*
 
-      Your message was sent successfully!
+      Votre message a été envoyé avec succès !
 
-      We'll be in touch.
-    ctaLabel: Send Message
-    messageLabel: Your Message
-    emailLabel: Your Email
-    nameLabel: Your Name
-  subtitle:
-    Have a project for us, or just want to say hi? Feel free to send us an
-    email at *knots.analytics@gmail.com* or use the form below.
+      Nous vous contacterons.
+    ctaLabel: Envoyer un message
+    messageLabel: Votre Message
+    emailLabel: Votre email
+    nameLabel: Votre Nom
+  subtitle: Vous avez un projet pour nous, ou vous voulez simplement nous saluer ?
+    N'hésitez pas à nous envoyer un courriel à *knots.analytics@gmail.com* ou à
+    utiliser le formulaire ci-dessous.
