@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import cn from "classnames";
 import { gsap } from "gsap";
 import Burger from "../../lib/Burger/Burger";
+import { sortedLastIndex } from "lodash";
 
 export type NavigationProps = {
   handleElClick: (idx: number) => void;
@@ -18,9 +19,8 @@ const Navigation: React.FC<NavigationProps> = ({
   handleHomeClick,
 }) => {
   const [active, setActive] = useState(false);
-  // const [DD, setDD] = useState(false);
-  // const locales = useRouter().locales;
-  // const locale = useRouter().locale;
+  const [DD, setDD] = useState(false);
+  const locale = useRouter().locale;
 
   const handleElClicked = (idx: number) => {
     setActive(false);
@@ -73,7 +73,7 @@ const Navigation: React.FC<NavigationProps> = ({
           {item}
         </a>
       ))}
-      {/* <div
+      <div
         className={cn(styles.lang, { [styles.active]: active })}
         onClick={() => setDD(!DD)}
       >
@@ -86,18 +86,26 @@ const Navigation: React.FC<NavigationProps> = ({
           <img src="/images/chevron-down.svg" alt="language" />
         </p>
         <div className={`${styles.dropdown} ${DD ? styles.show : ""}`}>
-          {locales &&
-            locales
-              .filter((item) => item !== locale)
-              .map((item) => (
-                <Link href="/" locale={String(item)} key={item}>
-                  <a className={"small"} onClick={() => setActive(false)}>
-                    {String(item)}
-                  </a>
-                </Link>
-              ))}
+          <Link href="/" locale={"en"}>
+            <a
+              className={cn("small", {
+                [styles.disabled]: locale === "en",
+              })}
+              onClick={() => setActive(false)}
+            >
+              🇬🇧 English
+            </a>
+          </Link>
+          <Link href="/" locale={"fr"}>
+            <a
+              className={cn("small", { [styles.disabled]: locale === "fr" })}
+              onClick={() => setActive(false)}
+            >
+              🇫🇷 French
+            </a>
+          </Link>
         </div>
-      </div> */}
+      </div>
       <Burger active={active} onClick={() => setActive(!active)} />
       <div className={cn(styles.mobileBg, { [styles.active]: active })}></div>
     </nav>

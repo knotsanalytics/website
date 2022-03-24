@@ -89,9 +89,7 @@
   &:first-of-type {
     padding: 0 30px 0 0;
   }
-  &:last-of-type {
-    padding: 0 0 0 30px;
-  }
+
   &:after {
     content: "";
     display: block;
@@ -117,6 +115,7 @@
   margin-left: 30px;
   display: none;
   z-index: 1;
+
   @media only screen and (min-width: $breakpoint-sm) {
     display: block;
   }
@@ -164,20 +163,23 @@
     display: none;
     &.show {
       position: absolute;
-      left: -20px;
-      right: 0;
+      right: unset;
+      left: 0;
       top: 60px;
       display: flex;
       flex-direction: column;
       background-color: $white;
       box-shadow: 0 9px 9px -9px rgba(0, 0, 0, 0.13);
-      padding: 10px 20px;
+      padding: 15px 20px;
       @media only screen and (min-width: $breakpoint-sm) {
         top: 30px;
+        right: 0;
+        left: unset;
       }
       a {
-        // padding: 10px 0 0 0;
         text-decoration: none;
+        white-space: nowrap;
+        margin-top: 10px;
         &:after {
           content: "";
           display: block;
@@ -189,6 +191,14 @@
         &:hover:after {
           width: 100%;
         }
+        &.disabled {
+          pointer-events: none;
+          opacity: 0.5;
+        }
+      }
+      p {
+        font-weight: $font-medium;
+        margin-bottom: 10px;
       }
     }
   }
